@@ -622,6 +622,26 @@ svg a:hover rect{{stroke:var(--orange);stroke-width:2}}
   {archive_blocks}
   <div class="foot">{footer}</div>
 </div>
+<script>
+// tells an embedding <iframe>'s parent page how tall this page is, so the parent can resize
+// the iframe to fit — this page's height changes whenever a version is added, so a fixed
+// iframe height/aspect-ratio on the parent side goes stale; this keeps it correct instead.
+// See embed-snippet.html at the repo root for the matching parent-side listener.
+(function() {{
+  var lastHeight = 0;
+  function postHeight() {{
+    var h = document.documentElement.scrollHeight;
+    if (h !== lastHeight) {{
+      lastHeight = h;
+      window.parent.postMessage({{ uneiaparjourSelectionHeight: h }}, '*');
+    }}
+  }}
+  window.addEventListener('load', postHeight);
+  window.addEventListener('resize', postHeight);
+  if (document.fonts && document.fonts.ready) {{ document.fonts.ready.then(postHeight); }}
+  setInterval(postHeight, 1000);
+}})();
+</script>
 </body>
 </html>
 """

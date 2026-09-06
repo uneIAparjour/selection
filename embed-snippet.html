@@ -1,0 +1,50 @@
+<!--
+  Embed snippet for uneiaparjour.fr/selection/ (FR) and /en/selection/ (EN).
+
+  Paste this into a WordPress "Custom HTML" block, once per language, swapping the src
+  for the EN one on the English page. The iframe has no fixed height: the embedded page
+  posts its own height via postMessage on load/resize/font-load (see the <script> at the
+  end of build/generate.py's FULL_PAGE_TEMPLATE), and the listener below resizes the
+  iframe to match. This matters because the page's height changes every time a version is
+  added or removed — a fixed height or aspect-ratio would need updating by hand each time
+  and would otherwise clip content (as happened with the first, fixed-aspect-ratio embed).
+-->
+<iframe
+  id="uneiaparjour-selection-fr"
+  src="https://uneiaparjour.github.io/selection/selection-outils.html"
+  style="width:100%;max-width:900px;border:0;display:block;margin:0 auto;height:800px"
+  loading="lazy"
+  title="Sélection d'applications d'IA génératives — uneIAparjour">
+</iframe>
+<script>
+(function () {
+  var iframe = document.getElementById('uneiaparjour-selection-fr');
+  window.addEventListener('message', function (event) {
+    if (event.origin !== 'https://uneiaparjour.github.io') return;
+    if (event.data && typeof event.data.uneiaparjourSelectionHeight === 'number') {
+      iframe.style.height = event.data.uneiaparjourSelectionHeight + 'px';
+    }
+  });
+})();
+</script>
+
+<!-- EN version: same pattern, different id/src, on the /en/selection/ page.
+<iframe
+  id="uneiaparjour-selection-en"
+  src="https://uneiaparjour.github.io/selection/selection-outils-en.html"
+  style="width:100%;max-width:900px;border:0;display:block;margin:0 auto;height:800px"
+  loading="lazy"
+  title="Generative AI apps selection — uneIAparjour">
+</iframe>
+<script>
+(function () {
+  var iframe = document.getElementById('uneiaparjour-selection-en');
+  window.addEventListener('message', function (event) {
+    if (event.origin !== 'https://uneiaparjour.github.io') return;
+    if (event.data && typeof event.data.uneiaparjourSelectionHeight === 'number') {
+      iframe.style.height = event.data.uneiaparjourSelectionHeight + 'px';
+    }
+  });
+})();
+</script>
+-->
