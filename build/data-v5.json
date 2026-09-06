@@ -1,0 +1,184 @@
+{
+  "categories": [
+    {
+      "fr": "Éducation",
+      "en": "Education",
+      "levels": {
+        "avance": [
+          "lenny-learning"
+        ],
+        "plus_loin": [
+          "magicschool",
+          "brisk-teaching"
+        ],
+        "decouvrir": [
+          "assistant-denseignement",
+          "accessdoc",
+          "studocu"
+        ]
+      }
+    },
+    {
+      "fr": "Chatbots",
+      "en": "Chatbots",
+      "levels": {
+        "avance": [
+          "gemini"
+        ],
+        "plus_loin": [
+          "artefacts-de-claude",
+          "le-chat-v2"
+        ],
+        "decouvrir": [
+          "chatbot-arena",
+          "comparia",
+          "euria"
+        ]
+      }
+    },
+    {
+      "fr": "Analyse de documents",
+      "en": "Document analysis",
+      "levels": {
+        "avance": [
+          "notebooklm"
+        ],
+        "plus_loin": [
+          "ainee",
+          "rows"
+        ],
+        "decouvrir": [
+          "feen",
+          "mistral-ocr-3",
+          "liminary"
+        ]
+      }
+    },
+    {
+      "fr": "Présentation",
+      "en": "Presentation",
+      "levels": {
+        "avance": [
+          "kimi-slides"
+        ],
+        "plus_loin": [
+          "gamma",
+          "napkin"
+        ],
+        "decouvrir": [
+          "prezo",
+          "infographix",
+          "trails"
+        ]
+      }
+    },
+    {
+      "fr": "Quiz et flashcards",
+      "en": "Quiz & flashcards",
+      "levels": {
+        "avance": [
+          "quiz-wizard"
+        ],
+        "plus_loin": [
+          "panquiz",
+          "quizizz-wayground"
+        ],
+        "decouvrir": [
+          "flashcardx",
+          "mindmaclasse",
+          "aiaiapps"
+        ]
+      }
+    },
+    {
+      "fr": "Musique",
+      "en": "Music",
+      "levels": {
+        "avance": [
+          "tunee"
+        ],
+        "plus_loin": [
+          "suno",
+          "producer"
+        ],
+        "decouvrir": [
+          "sonauto",
+          "minimax-audio",
+          "national-gallery-mixtape"
+        ]
+      }
+    },
+    {
+      "fr": "Voix",
+      "en": "Voice",
+      "levels": {
+        "avance": [
+          "dicte"
+        ],
+        "plus_loin": [
+          "genfm",
+          "gemini-tts"
+        ],
+        "decouvrir": [
+          "kyutai-stt",
+          "supertonic",
+          "handy"
+        ]
+      }
+    },
+    {
+      "fr": "Recherche",
+      "en": "Search",
+      "levels": {
+        "avance": [
+          "perplexity"
+        ],
+        "plus_loin": [
+          "felo",
+          "open-knowledge-maps"
+        ],
+        "decouvrir": [
+          "komo",
+          "search-de-jina-ai",
+          "turboseek"
+        ]
+      }
+    },
+    {
+      "fr": "Image et vidéo",
+      "en": "Image & video",
+      "levels": {
+        "avance": [
+          "kling"
+        ],
+        "plus_loin": [
+          "reve",
+          "nano-banana-pro"
+        ],
+        "decouvrir": [
+          "cybercut",
+          "wan-2-6",
+          "flux-2"
+        ]
+      }
+    },
+    {
+      "fr": "Applications et agents",
+      "en": "Apps & agents",
+      "levels": {
+        "avance": [
+          "partyrock"
+        ],
+        "plus_loin": [
+          "replit",
+          "antigravity"
+        ],
+        "decouvrir": [
+          "tldraw-computer",
+          "lovable",
+          "comet"
+        ]
+      }
+    }
+  ]
+}

@@ -3,21 +3,25 @@ import json, math, base64, os
 
 BUILD = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(BUILD)
-LOGOS = os.path.join(ROOT, "logos")
-
-with open(os.path.join(BUILD, "data.json")) as f:
-    DATA = json.load(f)
-with open(os.path.join(BUILD, "tools-lookup.json")) as f:
-    LOOKUP = json.load(f)
-with open(os.path.join(BUILD, "logo-sizes.json")) as f:
-    LOGO_SIZES = json.load(f)
 
 with open(os.path.join(BUILD, "cc-by-badge.png"), "rb") as f:
     CC_BADGE_URI = "data:image/png;base64," + base64.b64encode(f.read()).decode("ascii")
-with open(os.path.join(BUILD, "transparent-logos.json")) as f:
-    TRANSPARENT_LOGOS = set(json.load(f))
-with open(os.path.join(BUILD, "logo-frame-colors.json")) as f:
-    LOGO_FRAME_COLORS = json.load(f)
+
+
+class Assets:
+    """Everything that varies per wheel version (tool list, logos) — never the layout/design
+    logic below, which is shared and version-agnostic."""
+
+    def __init__(self, suffix, logos_dirname):
+        def load(name):
+            with open(os.path.join(BUILD, f"{name}{suffix}.json")) as f:
+                return json.load(f)
+        self.DATA = load("data")
+        self.LOOKUP = load("tools-lookup")
+        self.LOGO_SIZES = load("logo-sizes")
+        self.LOGO_FRAME_COLORS = load("logo-frame-colors")
+        self.META = load("meta")
+        self.LOGOS = os.path.join(ROOT, logos_dirname)
 
 LEVEL_ORDER = ["avance", "plus_loin", "decouvrir"]  # inner -> outer
 
@@ -93,14 +97,17 @@ def label_rotation(mid_angle):
     return raw
 
 
-def img_data_uri(slug):
-    path = os.path.join(LOGOS, f"{slug}.png")
+def img_data_uri(logos_dir, slug):
+    path = os.path.join(logos_dir, f"{slug}.png")
     with open(path, "rb") as f:
         b = f.read()
     return "data:image/png;base64," + base64.b64encode(b).decode("ascii")
 
 
-def build_svg(lang, id_prefix="m"):
+def build_svg(assets, lang, id_prefix="m"):
+    DATA, LOOKUP, LOGO_SIZES, LOGO_FRAME_COLORS, LOGOS = (
+        assets.DATA, assets.LOOKUP, assets.LOGO_SIZES, assets.LOGO_FRAME_COLORS, assets.LOGOS,
+    )
     cats = DATA["categories"]
     defs = []
     parts = []
@@ -168,7 +175,7 @@ def build_svg(lang, id_prefix="m"):
                 slot_w = 2 * r_inner_est * math.sin(math.radians(sub) / 2) * MARGIN - GAP_PX
                 scale = min(slot_w / nat_w, scale_h, 4.0)
                 dw, dh = nat_w * scale, nat_h * scale
-                uri = img_data_uri(slug)
+                uri = img_data_uri(LOGOS, slug)
                 info = LOOKUP[slug]
                 pad = 3
                 frame_color = LOGO_FRAME_COLORS.get(slug, "#ffffff")
@@ -255,16 +262,16 @@ def build_svg(lang, id_prefix="m"):
         )
 
     # center content
+    n_tools = sum(len(l) for c in cats for l in c["levels"].values())
+    version_line = f"({assets.META['version']}) · {assets.META['date'][lang]}"
     if lang == "fr":
-        center_lines = ["Sélection subjective", "de 60 applications", "d'IA génératives", "gratuits ou freemium"]
+        center_lines = ["Sélection subjective", f"de {n_tools} applications", "d'IA génératives", "gratuits ou freemium"]
         site_line = "uneIAparjour.fr"
         tag_line = "#uneIAparjour"
-        version_line = "(V6) · août 2026"
     else:
-        center_lines = ["A subjective selection", "of 60 free or freemium", "generative AI apps"]
+        center_lines = ["A subjective selection", f"of {n_tools} free or freemium", "generative AI apps"]
         site_line = "uneIAparjour.fr"
         tag_line = "#uneIAparjour"
-        version_line = "(V6) · August 2026"
 
     ty = CY - 64
     center_text_parts = []
@@ -375,8 +382,8 @@ FOOTERS = {
 }
 HEADINGS = {"fr": "Sélection d'applications", "en": "Apps selection"}
 SUBHEADINGS = {
-    "fr": "60 applications d'IA génératives · 10 catégories · 3 niveaux d'appropriation",
-    "en": "60 generative AI apps · 10 categories · 3 skill levels",
+    "fr": "{n} applications d'IA génératives · 10 catégories · 3 niveaux d'appropriation",
+    "en": "{n} generative AI apps · 10 categories · 3 skill levels",
 }
 UI_LABELS = {
     "fr": {"print": "Télécharger en PDF"},
@@ -384,15 +391,16 @@ UI_LABELS = {
 }
 
 
-def build_page(lang):
-    svg = build_svg(lang)
+def build_page(assets, lang):
+    svg = build_svg(assets, lang)
     heading = HEADINGS[lang]
     labels = UI_LABELS[lang]
+    n_tools = sum(len(l) for c in assets.DATA["categories"] for l in c["levels"].values())
     html = PAGE_TEMPLATE.format(
         lang_attr=lang,
         title=heading,
         heading_lower=heading[0].lower() + heading[1:],
-        subheading=SUBHEADINGS[lang],
+        subheading=SUBHEADINGS[lang].format(n=n_tools),
         svg=svg,
         footer=FOOTERS[lang],
         print_label=labels["print"],
@@ -400,10 +408,18 @@ def build_page(lang):
     return html
 
 
-if __name__ == "__main__":
+def build_version(suffix, logos_dirname, out_dir):
+    assets = Assets(suffix, logos_dirname)
+    os.makedirs(out_dir, exist_ok=True)
     for lang, fname in [("fr", "selection-outils.html"), ("en", "selection-outils-en.html")]:
-        html = build_page(lang)
-        out_path = os.path.join(ROOT, fname)
+        html = build_page(assets, lang)
+        out_path = os.path.join(out_dir, fname)
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(html)
         print("wrote", out_path, len(html), "bytes")
+
+
+if __name__ == "__main__":
+    build_version("", "logos", ROOT)  # v6 — current, lives at the stable root URLs
+    build_version("-v5", "logos-v5", os.path.join(ROOT, "versions", "v5-0126"))
+    build_version("-v4", "logos-v4", os.path.join(ROOT, "versions", "v4-0825"))

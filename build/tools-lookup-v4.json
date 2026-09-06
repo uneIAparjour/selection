@@ -1,0 +1,246 @@
+{
+  "lenny-learning": {
+    "name": "Lenny learning",
+    "url": "https://www.uneiaparjour.fr/lenny-learning/"
+  },
+  "magicschool": {
+    "name": "MagicSchool",
+    "url": "https://www.uneiaparjour.fr/magicschool/"
+  },
+  "brisk-teaching": {
+    "name": "Brisk Teaching",
+    "url": "https://www.uneiaparjour.fr/brisk-teaching/"
+  },
+  "diffit": {
+    "name": "Diffit",
+    "url": "https://www.uneiaparjour.fr/diffit/"
+  },
+  "school-ai": {
+    "name": "School AI",
+    "url": "https://www.uneiaparjour.fr/school-ai/"
+  },
+  "assistant-denseignement": {
+    "name": "Assistant d'enseignement",
+    "url": "https://www.uneiaparjour.fr/assistant-denseignement/"
+  },
+  "gemini": {
+    "name": "Gemini",
+    "url": "https://www.uneiaparjour.fr/gemini/"
+  },
+  "artifacts-de-claude-3-5-sonnet": {
+    "name": "Artifacts de Claude 3.5 Sonnet",
+    "url": "https://www.uneiaparjour.fr/artifacts-de-claude-3-5-sonnet/"
+  },
+  "polychat": {
+    "name": "Polychat",
+    "url": "https://www.uneiaparjour.fr/polychat/"
+  },
+  "le-chat-v2": {
+    "name": "Le Chat Mistral",
+    "url": "https://www.uneiaparjour.fr/le-chat-v2/"
+  },
+  "chatbot-arena": {
+    "name": "Chatbot Arena",
+    "url": "https://www.uneiaparjour.fr/chatbot-arena/"
+  },
+  "lumo": {
+    "name": "Lumo",
+    "url": "https://www.uneiaparjour.fr/lumo/"
+  },
+  "comparia": {
+    "name": "compar:IA",
+    "url": "https://www.uneiaparjour.fr/comparia/"
+  },
+  "notebooklm": {
+    "name": "NotebookLM",
+    "url": "https://www.uneiaparjour.fr/notebooklm/"
+  },
+  "julius": {
+    "name": "Julius",
+    "url": "https://www.uneiaparjour.fr/julius/"
+  },
+  "ainee": {
+    "name": "Ainee",
+    "url": "https://www.uneiaparjour.fr/ainee/"
+  },
+  "recapiogpt": {
+    "name": "RecapioGPT",
+    "url": "https://www.uneiaparjour.fr/recapiogpt/"
+  },
+  "summarize": {
+    "name": "Summarize",
+    "url": "https://www.uneiaparjour.fr/summarize/"
+  },
+  "chatedu": {
+    "name": "ChatEdu",
+    "url": "https://www.uneiaparjour.fr/chatedu/"
+  },
+  "gamma": {
+    "name": "Gamma",
+    "url": "https://www.uneiaparjour.fr/gamma/"
+  },
+  "guidde": {
+    "name": "Guidde",
+    "url": "https://www.uneiaparjour.fr/guidde/"
+  },
+  "napkin": {
+    "name": "Napkin",
+    "url": "https://www.uneiaparjour.fr/napkin/"
+  },
+  "prezo": {
+    "name": "Prezo",
+    "url": "https://www.uneiaparjour.fr/prezo/"
+  },
+  "slidesgo": {
+    "name": "Slidesgo",
+    "url": "https://www.uneiaparjour.fr/slidesgo/"
+  },
+  "infographix": {
+    "name": "Infographix",
+    "url": "https://www.uneiaparjour.fr/infographix/"
+  },
+  "quiz-wizard": {
+    "name": "Quiz wizard",
+    "url": "https://www.uneiaparjour.fr/quiz-wizard/"
+  },
+  "quizalize": {
+    "name": "Quizalize",
+    "url": "https://www.uneiaparjour.fr/quizalize/"
+  },
+  "quizizz-wayground": {
+    "name": "Wayground",
+    "url": "https://www.uneiaparjour.fr/quizizz-wayground/"
+  },
+  "flashcardx": {
+    "name": "FlashcardX",
+    "url": "https://www.uneiaparjour.fr/flashcardx/"
+  },
+  "nexform": {
+    "name": "Nexform",
+    "url": "https://www.uneiaparjour.fr/nexform/"
+  },
+  "panquiz": {
+    "name": "Panquiz",
+    "url": "https://www.uneiaparjour.fr/panquiz/"
+  },
+  "pack-generator": {
+    "name": "Pack generator",
+    "url": "https://www.uneiaparjour.fr/pack-generator/"
+  },
+  "suno": {
+    "name": "Suno",
+    "url": "https://www.uneiaparjour.fr/suno/"
+  },
+  "producer": {
+    "name": "Producer",
+    "url": "https://www.uneiaparjour.fr/producer/"
+  },
+  "sonauto": {
+    "name": "Sonauto",
+    "url": "https://www.uneiaparjour.fr/sonauto/"
+  },
+  "minimax-audio": {
+    "name": "Minimax",
+    "url": "https://www.uneiaparjour.fr/minimax-audio/"
+  },
+  "musicgpt": {
+    "name": "MusicGPT",
+    "url": "https://www.uneiaparjour.fr/musicgpt/"
+  },
+  "dicte": {
+    "name": "Dicte",
+    "url": "https://www.uneiaparjour.fr/dicte/"
+  },
+  "genfm": {
+    "name": "GenFM",
+    "url": "https://www.uneiaparjour.fr/genfm/"
+  },
+  "kyutai-stt": {
+    "name": "Kyutai STT",
+    "url": "https://www.uneiaparjour.fr/kyutai-stt/"
+  },
+  "mumble": {
+    "name": "Mumble",
+    "url": "https://www.uneiaparjour.fr/mumble/"
+  },
+  "speechmatics": {
+    "name": "Speechmatics",
+    "url": "https://www.uneiaparjour.fr/speechmatics/"
+  },
+  "zenmic": {
+    "name": "Zenmic",
+    "url": "https://www.uneiaparjour.fr/zenmic/"
+  },
+  "perplexity": {
+    "name": "Perplexity",
+    "url": "https://www.uneiaparjour.fr/perplexity/"
+  },
+  "multi-search-et-multi-ai": {
+    "name": "Multi Search et Multi AI",
+    "url": "https://www.uneiaparjour.fr/multi-search-et-multi-ai/"
+  },
+  "open-knowledge-maps": {
+    "name": "Open Knowledge Maps",
+    "url": "https://www.uneiaparjour.fr/open-knowledge-maps/"
+  },
+  "felo": {
+    "name": "Felo",
+    "url": "https://www.uneiaparjour.fr/felo/"
+  },
+  "clemence": {
+    "name": "Clemence",
+    "url": "https://www.uneiaparjour.fr/clemence/"
+  },
+  "komo": {
+    "name": "Komo",
+    "url": "https://www.uneiaparjour.fr/komo/"
+  },
+  "krea": {
+    "name": "Krea",
+    "url": "https://www.uneiaparjour.fr/krea/"
+  },
+  "leonardo": {
+    "name": "Leonardo",
+    "url": "https://www.uneiaparjour.fr/leonardo/"
+  },
+  "gemini-2-5-flash-image": {
+    "name": "Gemini 2.5 Flash Image",
+    "url": "https://www.uneiaparjour.fr/gemini-2-5-flash-image/"
+  },
+  "kling": {
+    "name": "Kling AI",
+    "url": "https://www.uneiaparjour.fr/kling/"
+  },
+  "reve": {
+    "name": "Reve",
+    "url": "https://www.uneiaparjour.fr/reve/"
+  },
+  "magi": {
+    "name": "Magi",
+    "url": "https://www.uneiaparjour.fr/magi/"
+  },
+  "partyrock": {
+    "name": "PartyRock",
+    "url": "https://www.uneiaparjour.fr/partyrock/"
+  },
+  "replit": {
+    "name": "Replit",
+    "url": "https://www.uneiaparjour.fr/replit/"
+  },
+  "lovable": {
+    "name": "Lovable",
+    "url": "https://www.uneiaparjour.fr/lovable/"
+  },
+  "websim": {
+    "name": "Websim",
+    "url": "https://www.uneiaparjour.fr/websim/"
+  },
+  "aria-de-skymel": {
+    "name": "Aria de Skymel",
+    "url": "https://www.uneiaparjour.fr/aria-de-skymel/"
+  },
+  "tldraw-computer": {
+    "name": "tldraw computer",
+    "url": "https://www.uneiaparjour.fr/tldraw-computer/"
+  }
+}
