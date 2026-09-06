@@ -1,0 +1,184 @@
+{
+  "categories": [
+    {
+      "fr": "Éducation",
+      "en": "Education",
+      "levels": {
+        "avance": [
+          "brisk-teaching"
+        ],
+        "plus_loin": [
+          "magicschool",
+          "school-ai"
+        ],
+        "decouvrir": [
+          "twee",
+          "diffit",
+          "5-minutes-lesson-plan"
+        ]
+      }
+    },
+    {
+      "fr": "Texte et Chatbot",
+      "en": "Text & Chatbot",
+      "levels": {
+        "avance": [
+          "assistants-huggingchat"
+        ],
+        "plus_loin": [
+          "poe",
+          "artifacts-de-claude-3-5-sonnet"
+        ],
+        "decouvrir": [
+          "gemini",
+          "ai-chat-de-duckduckgo",
+          "chatbot-ia-de-firefox"
+        ]
+      }
+    },
+    {
+      "fr": "Analyse de documents",
+      "en": "Document analysis",
+      "levels": {
+        "avance": [
+          "notebookllm"
+        ],
+        "plus_loin": [
+          "julius",
+          "summarize"
+        ],
+        "decouvrir": [
+          "copula",
+          "documator",
+          "recapiogpt"
+        ]
+      }
+    },
+    {
+      "fr": "Présentation",
+      "en": "Presentation",
+      "levels": {
+        "avance": [
+          "gamma"
+        ],
+        "plus_loin": [
+          "gibbly",
+          "guidde"
+        ],
+        "decouvrir": [
+          "prezo",
+          "tome",
+          "slidesgo"
+        ]
+      }
+    },
+    {
+      "fr": "Quiz et flashcards",
+      "en": "Quiz & flashcards",
+      "levels": {
+        "avance": [
+          "quiz-wizard"
+        ],
+        "plus_loin": [
+          "quizizz",
+          "quizalize"
+        ],
+        "decouvrir": [
+          "eduease",
+          "flashcardx",
+          "ai-flash-cards"
+        ]
+      }
+    },
+    {
+      "fr": "Musique",
+      "en": "Music",
+      "levels": {
+        "avance": [
+          "pack-generator"
+        ],
+        "plus_loin": [
+          "suno",
+          "cassette"
+        ],
+        "decouvrir": [
+          "sonauto",
+          "udio",
+          "loudme"
+        ]
+      }
+    },
+    {
+      "fr": "Voix",
+      "en": "Voice",
+      "levels": {
+        "avance": [
+          "dicte"
+        ],
+        "plus_loin": [
+          "mumble",
+          "talknotes"
+        ],
+        "decouvrir": [
+          "notes-gpt",
+          "murf",
+          "speechmatics"
+        ]
+      }
+    },
+    {
+      "fr": "Recherche",
+      "en": "Search",
+      "levels": {
+        "avance": [
+          "perplexity"
+        ],
+        "plus_loin": [
+          "youchat",
+          "felo"
+        ],
+        "decouvrir": [
+          "bagoodex",
+          "genspark",
+          "think-any"
+        ]
+      }
+    },
+    {
+      "fr": "Vidéo",
+      "en": "Video",
+      "levels": {
+        "avance": [
+          "runway-ml"
+        ],
+        "plus_loin": [
+          "kling",
+          "zebracat"
+        ],
+        "decouvrir": [
+          "hailuoai",
+          "typpo",
+          "fliz"
+        ]
+      }
+    },
+    {
+      "fr": "Image",
+      "en": "Image",
+      "levels": {
+        "avance": [
+          "leonardo"
+        ],
+        "plus_loin": [
+          "krea",
+          "ideogram"
+        ],
+        "decouvrir": [
+          "firefly",
+          "sdxl-turbo",
+          "flux-pro"
+        ]
+      }
+    }
+  ]
+}

@@ -35,15 +35,17 @@ selection-outils.html         → version FR en ligne (URL stable, embarquée en
 selection-outils-en.html      → version EN en ligne (URL stable, embarquée en iframe)
 
 build/                        → générateur
-  generate.py                   script qui produit les deux HTML ci-dessus
-  data.json                     les 60 outils : catégorie / niveau / slug (source de vérité)
-  tools-lookup.json             slug → nom affiché + URL sur uneiaparjour.fr
-  logo-sizes.json               dimensions natives de chaque logo (calcul de mise à l'échelle)
-  logo-frame-colors.json        couleur de fond échantillonnée par logo (cadre arrondi)
+  generate.py                   script qui produit tous les HTML (modèle commun, toutes versions)
+  data.json / data-vN.json      les outils de chaque version : catégorie / niveau / slug (source de vérité)
+  tools-lookup.json / -vN       slug → nom affiché + URL sur uneiaparjour.fr, par version
+  logo-sizes.json / -vN         dimensions natives de chaque logo (calcul de mise à l'échelle)
+  logo-frame-colors.json / -vN  couleur de fond échantillonnée par logo (cadre arrondi)
+  meta.json / meta-vN.json      libellé de version + date affichés au centre de la roue
   transparent-logos.json        logos à fond transparent (repérés automatiquement)
   cc-by-badge.png                badge CC BY réel, extrait du design Canva original
 
-logos/                        → les 60 logos, meilleure résolution disponible
+logos/                        → un sous-dossier par version, mêmes slugs que dans data-vN.json
+  v2-1024/ … v6-0926/            (v6-0926 = version courante)
 logos-mapping.md              → tableau de correspondance outil / logo / résolution / export source
 
 source/                       → exports Canva originaux (.pptx + archive dézippée), un
@@ -51,17 +53,17 @@ source/                       → exports Canva originaux (.pptx + archive dézi
                                   et pour ré-extraire des logos si une future version en a besoin
 
 versions/                     → instantané figé du HTML publié à chaque version
-  v6-0926/                       (v6 = version actuelle ; v1 à v5 restent à construire)
+  v2-1024/ … v6-0926/            (v6 = version actuelle ; seule v1-0724 reste à construire)
 ```
 
 ### Pourquoi garder `source/` ET `versions/`
 
-Le dépôt est organisé pour accueillir les 5 autres versions historiques de la roue
-(v1-0724 à v5-0126), chacune en FR + EN, en plus de la v6 actuelle :
+Le dépôt est organisé pour accueillir l'historique complet de la roue, chacune en FR + EN,
+en plus de la v6 actuelle :
 
 - `source/vN-XXXX/` garde l'export Canva d'origine de chaque version — utile si on doit
   un jour ré-extraire un logo ou vérifier un détail de mise en page historique.
-- `versions/vN-XXXX/` gardera l'instantané HTML figé de chaque version une fois générée,
+- `versions/vN-XXXX/` garde l'instantané HTML figé de chaque version une fois générée,
   pour l'historique — un peu comme la section "Archives" de la page Sélection sur le site.
 - Seule la **dernière version** vit à la racine (`selection-outils.html` /
   `-en.html`) : ce sont les deux seules URLs à ne jamais changer, puisque ce sont elles

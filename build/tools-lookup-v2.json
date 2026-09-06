@@ -1,0 +1,242 @@
+{
+  "krea": {
+    "name": "Krea",
+    "url": "https://www.uneiaparjour.fr/krea/"
+  },
+  "ideogram": {
+    "name": "Ideogram",
+    "url": "https://www.uneiaparjour.fr/ideogram/"
+  },
+  "leonardo": {
+    "name": "Leonardo",
+    "url": "https://www.uneiaparjour.fr/leonardo/"
+  },
+  "firefly": {
+    "name": "Adobe Firefly",
+    "url": "https://www.uneiaparjour.fr/firefly/"
+  },
+  "sdxl-turbo": {
+    "name": "SDXL Turbo",
+    "url": "https://www.uneiaparjour.fr/sdxl-turbo/"
+  },
+  "dicte": {
+    "name": "Dicte",
+    "url": "https://www.uneiaparjour.fr/dicte/"
+  },
+  "notes-gpt": {
+    "name": "NotesGPT",
+    "url": "https://www.uneiaparjour.fr/notes-gpt/"
+  },
+  "murf": {
+    "name": "Murf.AI",
+    "url": "https://www.uneiaparjour.fr/murf/"
+  },
+  "sonauto": {
+    "name": "Sonauto",
+    "url": "https://www.uneiaparjour.fr/sonauto/"
+  },
+  "suno": {
+    "name": "Suno",
+    "url": "https://www.uneiaparjour.fr/suno/"
+  },
+  "udio": {
+    "name": "Udio",
+    "url": "https://www.uneiaparjour.fr/udio/"
+  },
+  "quiz-wizard": {
+    "name": "Quiz wizard",
+    "url": "https://www.uneiaparjour.fr/quiz-wizard/"
+  },
+  "quizizz": {
+    "name": "Quizizz",
+    "url": "https://www.uneiaparjour.fr/quizizz-wayground/"
+  },
+  "eduease": {
+    "name": "EduEase",
+    "url": "https://www.uneiaparjour.fr/eduease/"
+  },
+  "flashcardx": {
+    "name": "FlashcardX",
+    "url": "https://www.uneiaparjour.fr/flashcardx/"
+  },
+  "quizalize": {
+    "name": "Quizalize",
+    "url": "https://www.uneiaparjour.fr/quizalize/"
+  },
+  "gamma": {
+    "name": "Gamma",
+    "url": "https://www.uneiaparjour.fr/gamma/"
+  },
+  "prezo": {
+    "name": "Prezo",
+    "url": "https://www.uneiaparjour.fr/prezo/"
+  },
+  "gibbly": {
+    "name": "Gibbly",
+    "url": "https://www.uneiaparjour.fr/gibbly/"
+  },
+  "tome": {
+    "name": "Tome",
+    "url": "https://www.uneiaparjour.fr/tome/"
+  },
+  "copula": {
+    "name": "Copula AI",
+    "url": "https://www.uneiaparjour.fr/copula/"
+  },
+  "julius": {
+    "name": "Julius",
+    "url": "https://www.uneiaparjour.fr/julius/"
+  },
+  "assistants-huggingchat": {
+    "name": "HuggingChat",
+    "url": "https://www.uneiaparjour.fr/assistants-huggingchat/"
+  },
+  "poe": {
+    "name": "Poe",
+    "url": "https://www.uneiaparjour.fr/poe/"
+  },
+  "gemini": {
+    "name": "Gemini",
+    "url": "https://www.uneiaparjour.fr/gemini/"
+  },
+  "twee": {
+    "name": "Twee",
+    "url": "https://www.uneiaparjour.fr/twee/"
+  },
+  "diffit": {
+    "name": "Diffit",
+    "url": "https://www.uneiaparjour.fr/diffit/"
+  },
+  "magicschool": {
+    "name": "MagicSchool",
+    "url": "https://www.uneiaparjour.fr/magicschool/"
+  },
+  "5-minutes-lesson-plan": {
+    "name": "5 Minute Lesson Plan",
+    "url": "https://www.uneiaparjour.fr/5-minutes-lesson-plan/"
+  },
+  "brisk-teaching": {
+    "name": "Brisk Teaching",
+    "url": "https://www.uneiaparjour.fr/brisk-teaching/"
+  },
+  "hailuoai": {
+    "name": "Hailuo AI",
+    "url": "https://www.uneiaparjour.fr/hailuoai/"
+  },
+  "kling": {
+    "name": "Kling AI",
+    "url": "https://www.uneiaparjour.fr/kling/"
+  },
+  "runway-ml": {
+    "name": "Runway",
+    "url": "https://www.uneiaparjour.fr/runway-ml/"
+  },
+  "typpo": {
+    "name": "Typpo",
+    "url": "https://www.uneiaparjour.fr/typpo/"
+  },
+  "zebracat": {
+    "name": "Zebracat",
+    "url": "https://www.uneiaparjour.fr/zebracat/"
+  },
+  "fliz": {
+    "name": "Fliz",
+    "url": "https://www.uneiaparjour.fr/fliz/"
+  },
+  "perplexity": {
+    "name": "Perplexity",
+    "url": "https://www.uneiaparjour.fr/perplexity/"
+  },
+  "youchat": {
+    "name": "you.com",
+    "url": "https://www.uneiaparjour.fr/youchat/"
+  },
+  "ai-chat-de-duckduckgo": {
+    "name": "DuckDuckGo AI Chat",
+    "url": "https://www.uneiaparjour.fr/ai-chat-de-duckduckgo/"
+  },
+  "bagoodex": {
+    "name": "Bagoodex",
+    "url": "https://www.uneiaparjour.fr/bagoodex/"
+  },
+  "genspark": {
+    "name": "Genspark",
+    "url": "https://www.uneiaparjour.fr/genspark/"
+  },
+  "felo": {
+    "name": "Felo",
+    "url": "https://www.uneiaparjour.fr/felo/"
+  },
+  "think-any": {
+    "name": "ThinkAny",
+    "url": "https://www.uneiaparjour.fr/think-any/"
+  },
+  "mumble": {
+    "name": "Mumble Note",
+    "url": "https://www.uneiaparjour.fr/mumble/"
+  },
+  "speechmatics": {
+    "name": "Speechmatics",
+    "url": "https://www.uneiaparjour.fr/speechmatics/"
+  },
+  "talknotes": {
+    "name": "TalkNotes",
+    "url": "https://www.uneiaparjour.fr/talknotes/"
+  },
+  "pack-generator": {
+    "name": "Output",
+    "url": "https://www.uneiaparjour.fr/pack-generator/"
+  },
+  "loudme": {
+    "name": "LoudMe",
+    "url": "https://www.uneiaparjour.fr/loudme/"
+  },
+  "chatbot-ia-de-firefox": {
+    "name": "Chatbot IA de Firefox",
+    "url": "https://www.uneiaparjour.fr/chatbot-ia-de-firefox/"
+  },
+  "artifacts-de-claude-3-5-sonnet": {
+    "name": "Artifacts de Claude 3.5 Sonnet",
+    "url": "https://www.uneiaparjour.fr/artifacts-de-claude-3-5-sonnet/"
+  },
+  "notebookllm": {
+    "name": "NotebookLM",
+    "url": "https://www.uneiaparjour.fr/notebooklm/"
+  },
+  "documator": {
+    "name": "Documator",
+    "url": "https://www.uneiaparjour.fr/documator/"
+  },
+  "recapiogpt": {
+    "name": "RecapioGPT",
+    "url": "https://www.uneiaparjour.fr/recapiogpt/"
+  },
+  "summarize": {
+    "name": "Summarize",
+    "url": "https://www.uneiaparjour.fr/summarize/"
+  },
+  "guidde": {
+    "name": "Guidde",
+    "url": "https://www.uneiaparjour.fr/guidde/"
+  },
+  "slidesgo": {
+    "name": "Slidesgo",
+    "url": "https://www.uneiaparjour.fr/slidesgo/"
+  },
+  "ai-flash-cards": {
+    "name": "AI Flash.Cards",
+    "url": "https://www.uneiaparjour.fr/ai-flash-cards/"
+  },
+  "school-ai": {
+    "name": "School AI",
+    "url": "https://www.uneiaparjour.fr/school-ai/"
+  },
+  "cassette": {
+    "name": "Cassette",
+    "url": "https://www.uneiaparjour.fr/cassette/"
+  },
+  "flux-pro": {
+    "name": "Flux 1.1",
+    "url": "https://www.uneiaparjour.fr/flux-pro/"
+  }
+}

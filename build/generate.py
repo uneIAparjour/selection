@@ -43,6 +43,13 @@ CAT_COLORS = {
     "Recherche":               {"avance": "#55d970", "plus_loin": "#49bd61", "decouvrir": "#3fa153"},
     "Image et vidéo":          {"avance": "#87d397", "plus_loin": "#73b581", "decouvrir": "#61996d"},
     "Applications et agents":  {"avance": "#03afd1", "plus_loin": "#0397b5", "decouvrir": "#037f99"},
+    # v2 (octobre 2024) used a different category split before "Chatbots" and
+    # "Image et vidéo" / "Applications et agents" took their current shape; the
+    # underlying 10-slot color palette is identical, confirmed by sampling the
+    # v2 PDF export pixel-for-pixel against the values above.
+    "Texte et Chatbot":        {"avance": "#dfa1ab", "plus_loin": "#c18b93", "decouvrir": "#a5777d"},
+    "Vidéo":                   {"avance": "#87d397", "plus_loin": "#73b581", "decouvrir": "#61996d"},
+    "Image":                   {"avance": "#03afd1", "plus_loin": "#0397b5", "decouvrir": "#037f99"},
 }
 
 CX, CY = 500, 500
@@ -420,7 +427,8 @@ def build_version(suffix, logos_dirname, out_dir):
 
 
 if __name__ == "__main__":
-    build_version("", "logos", ROOT)  # v6 — current, lives at the stable root URLs
-    build_version("-v5", "logos-v5", os.path.join(ROOT, "versions", "v5-0126"))
-    build_version("-v4", "logos-v4", os.path.join(ROOT, "versions", "v4-0825"))
-    build_version("-v3", "logos-v3", os.path.join(ROOT, "versions", "v3-0225"))
+    build_version("", "logos/v6-0926", ROOT)  # v6 — current, lives at the stable root URLs
+    build_version("-v5", "logos/v5-0126", os.path.join(ROOT, "versions", "v5-0126"))
+    build_version("-v4", "logos/v4-0825", os.path.join(ROOT, "versions", "v4-0825"))
+    build_version("-v3", "logos/v3-0225", os.path.join(ROOT, "versions", "v3-0225"))
+    build_version("-v2", "logos/v2-1024", os.path.join(ROOT, "versions", "v2-1024"))
