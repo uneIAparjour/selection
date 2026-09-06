@@ -384,8 +384,8 @@ document.getElementById('printBtn').onclick = function(){{ window.print(); }};
 """
 
 FOOTERS = {
-    "fr": 'uneiaparjour.fr · CC BY 4.0 · <a href="https://www.uneiaparjour.fr/selection/" target="_blank" rel="noopener">page complète</a>',
-    "en": 'uneiaparjour.fr · CC BY 4.0 · <a href="https://www.uneiaparjour.fr/en/selection/" target="_blank" rel="noopener">full page</a>',
+    "fr": 'uneiaparjour.fr · CC BY 4.0',
+    "en": 'uneiaparjour.fr · CC BY 4.0',
 }
 HEADINGS = {"fr": "Sélection d'applications", "en": "Apps selection"}
 SUBHEADINGS = {
@@ -423,6 +423,7 @@ LIST_LABELS = {
         "col_levels": ["Pour découvrir", "Pour aller plus loin", "Utilisation avancée"],
         "pdf_label": "Télécharger au format pdf",
         "version_prefix": "Version du",
+        "print_wheel_label": "Imprimer la roue",
     },
     "en": {
         "list_title": "List of apps mentioned",
@@ -431,6 +432,7 @@ LIST_LABELS = {
         "col_levels": ["Getting started", "Going further", "Advanced use"],
         "pdf_label": "Download as PDF",
         "version_prefix": "Version of",
+        "print_wheel_label": "Print the wheel",
     },
 }
 
@@ -548,12 +550,18 @@ def build_version_block(idx, lang, is_current):
     tool_list = build_tool_list_html(data, lookup, lang)
     heading_tag = "h2" if is_current else "h3"
     block_class = "version-block current" if is_current else "version-block"
+    print_icon = (
+        '<svg viewBox="0 0 24 24"><path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm'
+        '-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/></svg>'
+    )
     return (
-        f'<div class="{block_class}">'
+        f'<div class="{block_class}" id="version-block-{idx}">'
         f'<{heading_tag}>{labels["version_prefix"]} {date}</{heading_tag}>'
         f'<p class="version-desc">{desc}</p>'
         f'{changes_html}'
         f'<a class="pdf-link" href="{pdf_url}" target="_blank" rel="noopener">{labels["pdf_label"]}</a>'
+        f'<button class="print-wheel-btn" type="button" onclick="printWheelOnly({idx})">'
+        f'{print_icon}{labels["print_wheel_label"]}</button>'
         f'<div class="wheel-card">{svg}</div>'
         f'{tool_list}'
         f'</div>'
@@ -582,8 +590,11 @@ body{{font-family:var(--font);background:#252525;display:flex;justify-content:ce
 .version-block h3{{font-size:14px;font-weight:800;margin-bottom:8px}}
 .version-desc{{font-size:12px;color:#ccc;line-height:1.6}}
 .version-changes{{font-size:11.5px;color:var(--muted);margin-top:4px;font-style:italic}}
-.pdf-link{{display:inline-block;margin-top:10px;font-size:11.5px;font-weight:700;color:var(--amber);text-decoration:none}}
+.pdf-link{{display:inline-block;margin-top:10px;margin-right:14px;font-size:11.5px;font-weight:700;color:var(--amber);text-decoration:none}}
 .pdf-link:hover{{text-decoration:underline}}
+.print-wheel-btn{{display:inline-flex;align-items:center;gap:6px;margin-top:10px;background:rgba(0,0,0,.25);border:1px solid var(--border);color:#fff;font-family:var(--font);font-size:11px;font-weight:700;padding:6px 12px;border-radius:7px;cursor:pointer;vertical-align:middle}}
+.print-wheel-btn:hover{{border-color:var(--orange);color:var(--orange)}}
+.print-wheel-btn svg{{width:12px;height:12px;fill:currentColor}}
 .wheel-card{{background:transparent;margin-top:16px}}
 svg{{width:100%;height:auto;display:block}}
 svg a:hover rect{{stroke:var(--orange);stroke-width:2}}
@@ -609,6 +620,17 @@ svg a:hover rect{{stroke:var(--orange);stroke-width:2}}
   .list-table td{{color:#000}}
   .list-table td:first-child{{color:#000}}
   .archives-heading{{color:#000}}
+  .print-wheel-btn{{display:none!important}}
+  /* "Imprimer la roue" sets body[data-print-only] to that block's index: hide everything
+     else on the page, then hide everything in that one block except its wheel-card, so the
+     printed page shows only the selected wheel and nothing else. */
+  body[data-print-only] .head,
+  body[data-print-only] .archives-heading,
+  body[data-print-only] .foot,
+  body[data-print-only] .version-block{{display:none!important}}
+  body[data-print-only] .version-block > *:not(.wheel-card){{display:none!important}}
+  body[data-print-only] .wheel-card{{margin-top:0}}
+  {print_only_css}
 }}
 </style>
 </head>
@@ -641,6 +663,17 @@ svg a:hover rect{{stroke:var(--orange);stroke-width:2}}
   if (document.fonts && document.fonts.ready) {{ document.fonts.ready.then(postHeight); }}
   setInterval(postHeight, 1000);
 }})();
+
+// "Imprimer la roue": marks which block to print (see the body[data-print-only] rules
+// above), triggers the browser print dialog, then clears the mark once printing is done
+// (or cancelled) so the normal page view comes back.
+function printWheelOnly(idx) {{
+  document.body.setAttribute('data-print-only', String(idx));
+  window.print();
+}}
+window.addEventListener('afterprint', function() {{
+  document.body.removeAttribute('data-print-only');
+}});
 </script>
 </body>
 </html>
@@ -653,6 +686,10 @@ def build_full_page(lang):
     archive_blocks = "".join(
         build_version_block(i, lang, is_current=False) for i in range(1, len(VERSION_INFO))
     )
+    print_only_css = "\n  ".join(
+        f'body[data-print-only="{i}"] #version-block-{i}{{display:block!important}}'
+        for i in range(len(VERSION_INFO))
+    )
     heading = HEADINGS[lang]
     html = FULL_PAGE_TEMPLATE.format(
         lang_attr=lang,
@@ -662,6 +699,7 @@ def build_full_page(lang):
         archives_title=labels["archives_title"],
         archive_blocks=archive_blocks,
         footer=FOOTERS[lang],
+        print_only_css=print_only_css,
     )
     fname = "selection-outils.html" if lang == "fr" else "selection-outils-en.html"
     out_path = os.path.join(ROOT, fname)
