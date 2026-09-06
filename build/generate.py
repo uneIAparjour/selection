@@ -415,6 +415,241 @@ def build_page(assets, lang):
     return html
 
 
+LIST_LABELS = {
+    "fr": {
+        "list_title": "Liste des applications citées",
+        "archives_title": "Archives",
+        "col_category": "Catégorie",
+        "col_levels": ["Pour découvrir", "Pour aller plus loin", "Utilisation avancée"],
+        "pdf_label": "Télécharger au format pdf",
+        "version_prefix": "Version du",
+    },
+    "en": {
+        "list_title": "List of apps mentioned",
+        "archives_title": "Archives",
+        "col_category": "Category",
+        "col_levels": ["Getting started", "Going further", "Advanced use"],
+        "pdf_label": "Download as PDF",
+        "version_prefix": "Version of",
+    },
+}
+
+# table column order matches the header labels below (découvrir -> avancé), the reverse of
+# LEVEL_ORDER (avance -> decouvrir) which is inner-to-outer for the wheel rings
+TABLE_LEVEL_ORDER = ["decouvrir", "plus_loin", "avance"]
+
+
+def build_tool_list_html(data, lookup, lang):
+    labels = LIST_LABELS[lang]
+    rows = []
+    for cat in data["categories"]:
+        cells = [f'<td>{cat[lang]}</td>']
+        for level in TABLE_LEVEL_ORDER:
+            slugs = cat["levels"][level]
+            links = ", ".join(
+                f'<a href="{lookup[s]["url"]}" target="_blank" rel="noopener">{lookup[s]["name"]}</a>'
+                for s in slugs
+            )
+            cells.append(f'<td>{links}</td>')
+        rows.append(f'<tr>{"".join(cells)}</tr>')
+    header_cells = "".join(f'<th>{c}</th>' for c in [labels["col_category"]] + labels["col_levels"])
+    return (
+        f'<div class="list-section"><h3>{labels["list_title"]}</h3>'
+        f'<table class="list-table"><thead><tr>{header_cells}</tr></thead>'
+        f'<tbody>{"".join(rows)}</tbody></table></div>'
+    )
+
+
+# each entry: (json suffix, versions/ dirname, "Version du" date, official PDF URL)
+# dates and PDF URLs come straight from the live uneiaparjour.fr/selection/ page (the "current"
+# version's own displayed date there is stale — this uses that PDF's actual creation date instead)
+VERSION_INFO = [
+    ("", "v6-0926", "28/08/2026",
+     "https://www.uneiaparjour.fr/wp-content/uploads/2026/08/Selection-outils-uneIAparjour-0826.pdf"),
+    ("-v5", "v5-0126", "01/02/2026",
+     "https://www.uneiaparjour.fr/wp-content/uploads/2026/01/Selection-outils-uneIAparjour-0126.pdf"),
+    ("-v4", "v4-0825", "28/08/2025",
+     "https://www.uneiaparjour.fr/wp-content/uploads/2025/08/Selection-uneIAparjour-0825.pdf"),
+    ("-v3", "v3-0225", "05/02/2025",
+     "https://www.uneiaparjour.fr/wp-content/uploads/2025/02/Selection-outils-uneIAparjour-0225.pdf"),
+    ("-v2", "v2-1024", "16/10/2024",
+     "https://www.uneiaparjour.fr/wp-content/uploads/2024/10/Selection-outils-uneIAparjour-1024.pdf"),
+    ("-v1", "v1-0724", "07/06/2024",
+     "https://www.uneiaparjour.fr/wp-content/uploads/2024/06/selection-outils-uneIAparjour.pdf"),
+]
+
+# verbatim (FR) / translated (EN) from the live uneiaparjour.fr/selection/ page, one entry per
+# VERSION_INFO row above
+VERSION_DESCRIPTIONS = {
+    "fr": [
+        ("Sélection subjective de 60 applications d’IA génératives gratuites ou freemium, classées "
+         "en 10 catégories : éducation, chatbots, analyse de documents, présentation, quiz et "
+         "flashcards, musique, voix, recherche, image et vidéo, génération d’applications et agents.",
+         "24 ajouts / suppressions et 3 mises à jour depuis la dernière version."),
+        ("Sélection subjective de 60 applications d’IA génératives gratuites ou freemium, classées "
+         "en 10 catégories : éducation, chatbots, analyse de documents, présentation, quiz et "
+         "flashcards, musique, voix, recherche, image et vidéo, génération d’applications et agents.",
+         "23 ajouts / suppressions depuis la dernière version."),
+        ("Sélection subjective de 60 applications d’IA génératives gratuites ou freemium, classées "
+         "en 10 catégories : éducation, chatbots, analyse de documents, présentation, quiz et "
+         "flashcards, musique, voix, recherche, image et vidéo, génération d’applications et agents.",
+         "22 ajouts / suppressions depuis la dernière version."),
+        ("Sélection subjective de 60 outils d’IA génératives gratuits ou freemium en 10 catégories : "
+         "éducation, chatbots, analyse de documents, présentation, quiz et flashcards, musique, voix, "
+         "recherche, image et vidéo, applications et agents.", None),
+        ("Sélection subjective de 60 outils d’IA génératives gratuits ou freemium en 10 catégories : "
+         "éducation, texte et chatbot, analyse de documents, présentation, quiz et flashcards, "
+         "musique, voix, recherche, vidéo et image.", None),
+        ("Sélection subjective de 35 outils d’IA génératives gratuits ou freemium en 7 catégories : "
+         "éducation, texte et chatbot, analyse de documents, présentation, quiz et flashcards, "
+         "voix et musique, image.", None),
+    ],
+    "en": [
+        ("A subjective selection of 60 free or freemium generative AI apps, sorted into 10 "
+         "categories: education, chatbots, document analysis, presentation, quiz & flashcards, "
+         "music, voice, search, image & video, apps & agents generation.",
+         "24 additions/removals and 3 updates since the last version."),
+        ("A subjective selection of 60 free or freemium generative AI apps, sorted into 10 "
+         "categories: education, chatbots, document analysis, presentation, quiz & flashcards, "
+         "music, voice, search, image & video, apps & agents generation.",
+         "23 additions/removals since the last version."),
+        ("A subjective selection of 60 free or freemium generative AI apps, sorted into 10 "
+         "categories: education, chatbots, document analysis, presentation, quiz & flashcards, "
+         "music, voice, search, image & video, apps & agents generation.",
+         "22 additions/removals since the last version."),
+        ("A subjective selection of 60 free or freemium generative AI tools in 10 categories: "
+         "education, chatbots, document analysis, presentation, quiz & flashcards, music, voice, "
+         "search, image & video, apps & agents.", None),
+        ("A subjective selection of 60 free or freemium generative AI tools in 10 categories: "
+         "education, text & chatbot, document analysis, presentation, quiz & flashcards, music, "
+         "voice, search, video & image.", None),
+        ("A subjective selection of 35 free or freemium generative AI tools in 7 categories: "
+         "education, text & chatbot, document analysis, presentation, quiz & flashcards, "
+         "voice & music, image.", None),
+    ],
+}
+
+
+def build_version_block(idx, lang, is_current):
+    suffix, dirname, date, pdf_url = VERSION_INFO[idx]
+    labels = LIST_LABELS[lang]
+    desc, changes = VERSION_DESCRIPTIONS[lang][idx]
+    changes_html = f'<p class="version-changes">{changes}</p>' if changes else ""
+
+    if dirname == "v1-0724":
+        import generate_v1
+        data, lookup = generate_v1.DATA, generate_v1.LOOKUP
+        svg = generate_v1.build_svg(lang, id_prefix=f"blk{idx}")
+    else:
+        assets = Assets(suffix, f"logos/{dirname}")
+        data, lookup = assets.DATA, assets.LOOKUP
+        svg = build_svg(assets, lang, id_prefix=f"blk{idx}")
+
+    tool_list = build_tool_list_html(data, lookup, lang)
+    heading_tag = "h2" if is_current else "h3"
+    block_class = "version-block current" if is_current else "version-block"
+    return (
+        f'<div class="{block_class}">'
+        f'<{heading_tag}>{labels["version_prefix"]} {date}</{heading_tag}>'
+        f'<p class="version-desc">{desc}</p>'
+        f'{changes_html}'
+        f'<a class="pdf-link" href="{pdf_url}" target="_blank" rel="noopener">{labels["pdf_label"]}</a>'
+        f'<div class="wheel-card">{svg}</div>'
+        f'{tool_list}'
+        f'</div>'
+    )
+
+
+FULL_PAGE_TEMPLATE = """<!DOCTYPE html>
+<html lang="{lang_attr}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title}</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Baloo+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{{box-sizing:border-box;margin:0;padding:0}}
+:root{{--bg:#383838;--dark:#2e2e2e;--border:#505050;--orange:#E67E22;--amber:#F39C12;--muted:#aaa;--font:'Montserrat',sans-serif}}
+body{{font-family:var(--font);background:#252525;display:flex;justify-content:center;align-items:flex-start;padding:24px;min-height:100vh}}
+.wrap{{width:100%;max-width:880px;background:var(--bg);color:#fff;border-radius:10px;overflow:hidden;box-shadow:0 12px 48px rgba(0,0,0,.5);position:relative}}
+.wrap::before{{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--orange),var(--amber) 50%,var(--orange));z-index:2}}
+.head{{padding:18px 28px 14px;text-align:center;background:var(--dark);border-bottom:1px solid var(--border)}}
+.head h1{{font-size:18px;font-weight:800;color:#fff}}
+.head h1 em{{font-style:normal;color:var(--orange)}}
+.version-block{{padding:24px 28px;border-bottom:1px solid var(--border)}}
+.version-block:last-child{{border-bottom:none}}
+.version-block h2{{font-size:16px;font-weight:800;margin-bottom:8px}}
+.version-block h3{{font-size:14px;font-weight:800;margin-bottom:8px}}
+.version-desc{{font-size:12px;color:#ccc;line-height:1.6}}
+.version-changes{{font-size:11.5px;color:var(--muted);margin-top:4px;font-style:italic}}
+.pdf-link{{display:inline-block;margin-top:10px;font-size:11.5px;font-weight:700;color:var(--amber);text-decoration:none}}
+.pdf-link:hover{{text-decoration:underline}}
+.wheel-card{{background:transparent;margin-top:16px}}
+svg{{width:100%;height:auto;display:block}}
+svg a:hover rect{{stroke:var(--orange);stroke-width:2}}
+.list-section{{margin-top:16px}}
+.list-section h3{{font-size:13px;font-weight:800;margin-bottom:8px}}
+.list-table{{width:100%;border-collapse:collapse;font-size:11.5px}}
+.list-table th,.list-table td{{text-align:left;padding:7px 9px;border:1px solid var(--border);vertical-align:top}}
+.list-table th{{background:var(--dark);font-weight:700;color:#fff}}
+.list-table td{{color:#ddd;line-height:1.6}}
+.list-table td:first-child{{font-weight:700;color:#fff;white-space:nowrap}}
+.list-table a{{color:var(--amber);text-decoration:none}}
+.list-table a:hover{{text-decoration:underline}}
+.archives-heading{{padding:20px 28px 0;font-size:15px;font-weight:800;letter-spacing:.5px;color:#fff}}
+.foot{{text-align:center;padding:14px 20px 18px;font-size:10px;color:var(--muted);background:var(--dark);border-top:1px solid var(--border)}}
+.foot a{{color:var(--orange);text-decoration:none;font-weight:600}}
+@media print{{
+  body{{background:#fff;padding:0;display:block}}
+  .wrap{{box-shadow:none;max-width:none;background:#fff;color:#000}}
+  .head,.foot{{background:#fff;color:#000;border-color:#ccc}}
+  .head h1{{color:#000}}
+  .version-desc,.version-changes{{color:#000}}
+  .list-table th{{background:#eee;color:#000}}
+  .list-table td{{color:#000}}
+  .list-table td:first-child{{color:#000}}
+  .archives-heading{{color:#000}}
+}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <h1>Une <em>IA</em> par jour : {heading_lower}</h1>
+  </div>
+  {current_block}
+  <div class="archives-heading">{archives_title}</div>
+  {archive_blocks}
+  <div class="foot">{footer}</div>
+</div>
+</body>
+</html>
+"""
+
+
+def build_full_page(lang):
+    labels = LIST_LABELS[lang]
+    current_block = build_version_block(0, lang, is_current=True)
+    archive_blocks = "".join(
+        build_version_block(i, lang, is_current=False) for i in range(1, len(VERSION_INFO))
+    )
+    heading = HEADINGS[lang]
+    html = FULL_PAGE_TEMPLATE.format(
+        lang_attr=lang,
+        title=heading,
+        heading_lower=heading[0].lower() + heading[1:],
+        current_block=current_block,
+        archives_title=labels["archives_title"],
+        archive_blocks=archive_blocks,
+        footer=FOOTERS[lang],
+    )
+    fname = "selection-outils.html" if lang == "fr" else "selection-outils-en.html"
+    out_path = os.path.join(ROOT, fname)
+    with open(out_path, "w", encoding="utf-8") as f:
+        f.write(html)
+    print("wrote", out_path, len(html), "bytes")
+
+
 def build_version(suffix, logos_dirname, out_dir):
     assets = Assets(suffix, logos_dirname)
     os.makedirs(out_dir, exist_ok=True)
@@ -427,8 +662,10 @@ def build_version(suffix, logos_dirname, out_dir):
 
 
 if __name__ == "__main__":
-    build_version("", "logos/v6-0926", ROOT)  # v6 — current, lives at the stable root URLs
+    build_version("", "logos/v6-0926", os.path.join(ROOT, "versions", "v6-0926"))
     build_version("-v5", "logos/v5-0126", os.path.join(ROOT, "versions", "v5-0126"))
     build_version("-v4", "logos/v4-0825", os.path.join(ROOT, "versions", "v4-0825"))
     build_version("-v3", "logos/v3-0225", os.path.join(ROOT, "versions", "v3-0225"))
     build_version("-v2", "logos/v2-1024", os.path.join(ROOT, "versions", "v2-1024"))
+    build_full_page("fr")
+    build_full_page("en")

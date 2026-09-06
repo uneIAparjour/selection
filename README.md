@@ -1,12 +1,17 @@
 # Sélection d'applications — uneIAparjour
 
-Roue interactive HTML/SVG des 60 applications d'IA générative sélectionnées par
+Page complète (roue interactive HTML/SVG + liste des applications + archives) des
+applications d'IA générative sélectionnées par
 [Une IA par jour](https://www.uneiaparjour.fr), classées en 10 catégories × 3 niveaux
 d'appropriation (Pour découvrir / Pour aller plus loin / Usage avancé).
 
 **Démo en ligne :** `selection-outils.html` (FR) et `selection-outils-en.html` (EN) —
 hébergées via GitHub Pages et embarquées en iframe sur la page
-[/selection/](https://www.uneiaparjour.fr/selection/) du site.
+[/selection/](https://www.uneiaparjour.fr/selection/) du site. Chaque page reprend
+la mise en page de cette page WordPress à l'identique — version courante (texte, roue,
+liste des applications) puis Archives (une même section répétée pour chaque version
+historique) — sauf que la roue Canva y est remplacée par la roue interactive et que
+chaque version, y compris les archives, a désormais sa propre liste d'applications.
 
 ## Pourquoi ce dépôt
 
@@ -31,13 +36,21 @@ design original à l'identique, plutôt que d'en proposer une réinterprétation
 ## Structure du dépôt
 
 ```
-selection-outils.html         → version FR en ligne (URL stable, embarquée en iframe)
-selection-outils-en.html      → version EN en ligne (URL stable, embarquée en iframe)
+selection-outils.html         → page FR en ligne (URL stable, embarquée en iframe) : version
+                                  courante (texte, roue, liste) puis Archives (idem pour
+                                  chaque version historique, v5 → v1)
+selection-outils-en.html      → même chose en EN
 
 build/                        → générateur
-  generate.py                   script qui produit le HTML des versions v2 à v6 (modèle commun)
+  generate.py                   script qui produit le HTML des versions v2 à v6 (modèle
+                                  commun) ainsi que la page combinée ci-dessus
+                                  (build_full_page) ; VERSION_INFO / VERSION_DESCRIPTIONS
+                                  y listent la date "Version du…", la description et l'URL
+                                  du PDF officiel de chaque version — à mettre à jour à
+                                  la main quand une nouvelle version sort
   generate_v1.py                 générateur séparé pour v1, dont le design d'origine diffère
-                                  (7 catégories, pas de trou de légende à 180°, etc.)
+                                  (7 catégories, pas de trou de légende à 180°, etc.) —
+                                  build_full_page l'importe pour le bloc v1 de la page combinée
   data.json / data-vN.json      les outils de chaque version : catégorie / niveau / slug (source de vérité)
   tools-lookup.json / -vN       slug → nom affiché + URL sur uneiaparjour.fr, par version
   logo-sizes.json / -vN         dimensions natives de chaque logo (calcul de mise à l'échelle)
@@ -65,11 +78,12 @@ actuelle), chacune en FR + EN :
 
 - `source/vN-XXXX/` garde l'export Canva d'origine de chaque version — utile si on doit
   un jour ré-extraire un logo ou vérifier un détail de mise en page historique.
-- `versions/vN-XXXX/` garde l'instantané HTML figé de chaque version une fois générée,
-  pour l'historique — un peu comme la section "Archives" de la page Sélection sur le site.
-- Seule la **dernière version** vit à la racine (`selection-outils.html` /
-  `-en.html`) : ce sont les deux seules URLs à ne jamais changer, puisque ce sont elles
-  qui sont embarquées en iframe sur le site.
+- `versions/vN-XXXX/` garde l'instantané HTML figé de chaque version toute seule (sans le
+  reste de la page) — utile pour lier directement à une version précise.
+- Les fichiers à la **racine** (`selection-outils.html` / `-en.html`) sont les deux seules
+  URLs à ne jamais changer, puisque ce sont elles qui sont embarquées en iframe sur le
+  site ; ils contiennent la page combinée (version courante + toutes les archives), pas
+  juste la dernière roue.
 
 ### Cas particulier : v1 (juillet 2024)
 
@@ -85,14 +99,19 @@ bruts, sans cadre).
 
 ## Démarche pas à pas
 
+Pour une nouvelle version qui remplace l'actuelle :
+
 1. Exporter le nouveau design Canva en `.pptx`, le dézipper dans `source/vN-XXXX/`.
 2. Mettre à jour `build/data.json` (catégories/outils) à partir du tableau de la page
    Sélection sur le site.
 3. Extraire les nouveaux logos si besoin (voir la méthode dans `logos-mapping.md` :
    les liens hypertexte du pptx pointent directement vers l'image associée).
-4. `python3 build/generate.py` → régénère `selection-outils.html` et `-en.html`.
-5. Copier ces deux fichiers dans `versions/vN-XXXX/` pour l'archive, garder la racine
-   comme version en ligne.
+4. Renommer l'ancienne version courante en `-vN` (data.json → data-vN.json, etc.,
+   logos/v6-0926 → logos/vN-MMYY) et ajouter son entrée en tête de `VERSION_INFO` /
+   `VERSION_DESCRIPTIONS` dans `build/generate.py` (date "Version du…", texte, URL du
+   PDF officiel — copiés depuis la page Sélection du site).
+5. `python3 build/generate.py` → régénère chaque `versions/vN-XXXX/selection-outils*.html`
+   et la page combinée `selection-outils.html` / `-en.html` à la racine.
 
 ## Licence
 
