@@ -35,7 +35,9 @@ selection-outils.html         → version FR en ligne (URL stable, embarquée en
 selection-outils-en.html      → version EN en ligne (URL stable, embarquée en iframe)
 
 build/                        → générateur
-  generate.py                   script qui produit tous les HTML (modèle commun, toutes versions)
+  generate.py                   script qui produit le HTML des versions v2 à v6 (modèle commun)
+  generate_v1.py                 générateur séparé pour v1, dont le design d'origine diffère
+                                  (7 catégories, pas de trou de légende à 180°, etc.)
   data.json / data-vN.json      les outils de chaque version : catégorie / niveau / slug (source de vérité)
   tools-lookup.json / -vN       slug → nom affiché + URL sur uneiaparjour.fr, par version
   logo-sizes.json / -vN         dimensions natives de chaque logo (calcul de mise à l'échelle)
@@ -45,7 +47,7 @@ build/                        → générateur
   cc-by-badge.png                badge CC BY réel, extrait du design Canva original
 
 logos/                        → un sous-dossier par version, mêmes slugs que dans data-vN.json
-  v2-1024/ … v6-0926/            (v6-0926 = version courante)
+  v1-0724/ … v6-0926/            (v6-0926 = version courante)
 logos-mapping.md              → tableau de correspondance outil / logo / résolution / export source
 
 source/                       → exports Canva originaux (.pptx + archive dézippée), un
@@ -53,13 +55,13 @@ source/                       → exports Canva originaux (.pptx + archive dézi
                                   et pour ré-extraire des logos si une future version en a besoin
 
 versions/                     → instantané figé du HTML publié à chaque version
-  v2-1024/ … v6-0926/            (v6 = version actuelle ; seule v1-0724 reste à construire)
+  v1-0724/ … v6-0926/            (v6 = version actuelle ; historique complet, v1 à v6)
 ```
 
 ### Pourquoi garder `source/` ET `versions/`
 
-Le dépôt est organisé pour accueillir l'historique complet de la roue, chacune en FR + EN,
-en plus de la v6 actuelle :
+Le dépôt garde l'historique complet de la roue, de v1 (juillet 2024) à v6 (version
+actuelle), chacune en FR + EN :
 
 - `source/vN-XXXX/` garde l'export Canva d'origine de chaque version — utile si on doit
   un jour ré-extraire un logo ou vérifier un détail de mise en page historique.
@@ -68,6 +70,18 @@ en plus de la v6 actuelle :
 - Seule la **dernière version** vit à la racine (`selection-outils.html` /
   `-en.html`) : ce sont les deux seules URLs à ne jamais changer, puisque ce sont elles
   qui sont embarquées en iframe sur le site.
+
+### Cas particulier : v1 (juillet 2024)
+
+Le design Canva de la toute première version diffère réellement des suivantes, pas
+seulement par ses outils : 7 catégories au lieu de 10 (pas encore de "Applications et
+agents", "Voix" et "Musique" encore fusionnées, "Chatbots" s'appelait "Texte et
+Chatbot"), un fond crème, une palette pastel avec anneaux de légende gris, et une police
+arrondie pour les textes hors noms de catégorie. `generate_v1.py` reproduit cette mise en
+page spécifique plutôt que de forcer v1 dans le modèle à 10 secteurs de `generate.py`.
+Seule exception volontaire à la fidélité totale : les logos y reçoivent le même
+traitement coins arrondis + cadre coloré que les autres versions (l'original les posait
+bruts, sans cadre).
 
 ## Démarche pas à pas
 

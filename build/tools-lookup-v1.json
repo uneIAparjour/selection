@@ -1,0 +1,170 @@
+{
+  "twee": {
+    "name": "Twee",
+    "url": "https://www.uneiaparjour.fr/twee/"
+  },
+  "diffit": {
+    "name": "Diffit",
+    "url": "https://www.uneiaparjour.fr/diffit/"
+  },
+  "magicschool": {
+    "name": "MagicSchool",
+    "url": "https://www.uneiaparjour.fr/magicschool/"
+  },
+  "5-minutes-lesson-plan": {
+    "name": "5 Minute Lesson Plan",
+    "url": "https://www.uneiaparjour.fr/5-minutes-lesson-plan/"
+  },
+  "brisk-teaching": {
+    "name": "Brisk Teaching",
+    "url": "https://www.uneiaparjour.fr/brisk-teaching/"
+  },
+  "nolej": {
+    "name": "NOLEJ",
+    "url": "https://www.uneiaparjour.fr/nolej/"
+  },
+  "copula": {
+    "name": "Copula AI",
+    "url": "https://www.uneiaparjour.fr/copula/"
+  },
+  "knowlee": {
+    "name": "Knowlee",
+    "url": "https://www.uneiaparjour.fr/knowlee/"
+  },
+  "any-summary": {
+    "name": "Any Summary",
+    "url": "https://www.uneiaparjour.fr/any-summary/"
+  },
+  "summarize": {
+    "name": "Summarize",
+    "url": "https://www.uneiaparjour.fr/summarize/"
+  },
+  "julius": {
+    "name": "Julius",
+    "url": "https://www.uneiaparjour.fr/julius/"
+  },
+  "slidesgo": {
+    "name": "Slidesgo",
+    "url": "https://www.uneiaparjour.fr/slidesgo/"
+  },
+  "gamma": {
+    "name": "Gamma",
+    "url": "https://www.uneiaparjour.fr/gamma/"
+  },
+  "decktopus": {
+    "name": "Decktopus",
+    "url": "https://www.uneiaparjour.fr/decktopus/"
+  },
+  "prezo": {
+    "name": "Prezo",
+    "url": "https://www.uneiaparjour.fr/prezo/"
+  },
+  "gibbly": {
+    "name": "Gibbly",
+    "url": "https://www.uneiaparjour.fr/gibbly/"
+  },
+  "tome": {
+    "name": "Tome",
+    "url": "https://www.uneiaparjour.fr/tome/"
+  },
+  "ownai": {
+    "name": "ownAI",
+    "url": "https://www.uneiaparjour.fr/ownai/"
+  },
+  "assistants-huggingchat": {
+    "name": "HuggingChat",
+    "url": "https://www.uneiaparjour.fr/assistants-huggingchat/"
+  },
+  "poe": {
+    "name": "Poe",
+    "url": "https://www.uneiaparjour.fr/poe/"
+  },
+  "les-gpts-de-chatgpt": {
+    "name": "ChatGPT",
+    "url": "https://www.uneiaparjour.fr/les-gpts-de-chatgpt/"
+  },
+  "gemini": {
+    "name": "Gemini",
+    "url": "https://www.uneiaparjour.fr/gemini/"
+  },
+  "bing-copilot": {
+    "name": "Copilot",
+    "url": "https://www.uneiaparjour.fr/bing-copilot/"
+  },
+  "krea": {
+    "name": "Krea",
+    "url": "https://www.uneiaparjour.fr/krea/"
+  },
+  "dall-e-3": {
+    "name": "DALL·E",
+    "url": "https://www.uneiaparjour.fr/dall-e-3/"
+  },
+  "ideogram": {
+    "name": "Ideogram",
+    "url": "https://www.uneiaparjour.fr/ideogram/"
+  },
+  "leonardo": {
+    "name": "Leonardo",
+    "url": "https://www.uneiaparjour.fr/leonardo/"
+  },
+  "firefly": {
+    "name": "Adobe Firefly",
+    "url": "https://www.uneiaparjour.fr/firefly/"
+  },
+  "sdxl-turbo": {
+    "name": "SDXL Turbo",
+    "url": "https://www.uneiaparjour.fr/sdxl-turbo/"
+  },
+  "chat-with-pdf": {
+    "name": "PDF Flex",
+    "url": "https://www.uneiaparjour.fr/chat-with-pdf/"
+  },
+  "quiz-wizard": {
+    "name": "Quiz wizard",
+    "url": "https://www.uneiaparjour.fr/quiz-wizard/"
+  },
+  "quizizz": {
+    "name": "Quizizz",
+    "url": "https://www.uneiaparjour.fr/quizizz-wayground/"
+  },
+  "questionwell": {
+    "name": "QuestionWell",
+    "url": "https://www.uneiaparjour.fr/questionwell/"
+  },
+  "eduease": {
+    "name": "EduEase",
+    "url": "https://www.uneiaparjour.fr/eduease/"
+  },
+  "flashcardx": {
+    "name": "FlashcardX",
+    "url": "https://www.uneiaparjour.fr/flashcardx/"
+  },
+  "quizalize": {
+    "name": "Quizalize",
+    "url": "https://www.uneiaparjour.fr/quizalize/"
+  },
+  "dicte": {
+    "name": "Dicte",
+    "url": "https://www.uneiaparjour.fr/dicte/"
+  },
+  "notes-gpt": {
+    "name": "NotesGPT",
+    "url": "https://www.uneiaparjour.fr/notes-gpt/"
+  },
+  "murf": {
+    "name": "Murf.AI",
+    "url": "https://www.uneiaparjour.fr/murf/"
+  },
+  "sonauto": {
+    "name": "Sonauto",
+    "url": "https://www.uneiaparjour.fr/sonauto/"
+  },
+  "suno": {
+    "name": "Suno",
+    "url": "https://www.uneiaparjour.fr/suno/"
+  },
+  "udio": {
+    "name": "Udio",
+    "url": "https://www.uneiaparjour.fr/udio/"
+  }
+}

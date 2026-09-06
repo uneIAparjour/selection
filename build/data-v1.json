@@ -1,0 +1,130 @@
+{
+  "categories": [
+    {
+      "fr": "Présentation",
+      "en": "Presentation",
+      "levels": {
+        "avance": [
+          "gamma"
+        ],
+        "plus_loin": [
+          "slidesgo",
+          "gibbly"
+        ],
+        "decouvrir": [
+          "decktopus",
+          "prezo",
+          "tome"
+        ]
+      }
+    },
+    {
+      "fr": "Quiz et flashcards",
+      "en": "Quiz & flashcards",
+      "levels": {
+        "avance": [
+          "quiz-wizard"
+        ],
+        "plus_loin": [
+          "quizizz",
+          "quizalize"
+        ],
+        "decouvrir": [
+          "questionwell",
+          "eduease",
+          "flashcardx"
+        ]
+      }
+    },
+    {
+      "fr": "Voix et musique",
+      "en": "Voice & music",
+      "levels": {
+        "avance": [
+          "dicte"
+        ],
+        "plus_loin": [
+          "murf",
+          "udio"
+        ],
+        "decouvrir": [
+          "notes-gpt",
+          "sonauto",
+          "suno"
+        ]
+      }
+    },
+    {
+      "fr": "Image",
+      "en": "Image",
+      "levels": {
+        "avance": [
+          "leonardo"
+        ],
+        "plus_loin": [
+          "krea",
+          "ideogram"
+        ],
+        "decouvrir": [
+          "dall-e-3",
+          "firefly",
+          "sdxl-turbo"
+        ]
+      }
+    },
+    {
+      "fr": "Éducation",
+      "en": "Education",
+      "levels": {
+        "avance": [
+          "brisk-teaching"
+        ],
+        "plus_loin": [
+          "magicschool",
+          "nolej"
+        ],
+        "decouvrir": [
+          "twee",
+          "diffit",
+          "5-minutes-lesson-plan"
+        ]
+      }
+    },
+    {
+      "fr": "Texte et Chatbot",
+      "en": "Text & Chatbot",
+      "levels": {
+        "avance": [
+          "assistants-huggingchat"
+        ],
+        "plus_loin": [
+          "ownai",
+          "poe"
+        ],
+        "decouvrir": [
+          "les-gpts-de-chatgpt",
+          "gemini",
+          "bing-copilot"
+        ]
+      }
+    },
+    {
+      "fr": "Analyse de documents",
+      "en": "Document analysis",
+      "levels": {
+        "avance": [
+          "julius"
+        ],
+        "plus_loin": [
+          "knowlee",
+          "summarize"
+        ],
+        "decouvrir": [
+          "copula",
+          "any-summary",
+          "chat-with-pdf"
+        ]
+      }
+    }
+  ]
+}
