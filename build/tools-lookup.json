@@ -1,0 +1,242 @@
+{
+  "eduquia": {
+    "name": "EduquIA",
+    "url": "https://www.uneiaparjour.fr/eduquia/"
+  },
+  "accessdoc": {
+    "name": "AccessDoc",
+    "url": "https://www.uneiaparjour.fr/accessdoc/"
+  },
+  "litgrades": {
+    "name": "LitGrades",
+    "url": "https://www.uneiaparjour.fr/litgrades/"
+  },
+  "assistant-ia-etreprof": {
+    "name": "Assistant IA ÊtrePROF",
+    "url": "https://www.uneiaparjour.fr/assistant-ia-etreprof/"
+  },
+  "brisk-teaching": {
+    "name": "Brisk Teaching",
+    "url": "https://www.uneiaparjour.fr/brisk-teaching/"
+  },
+  "magicschool": {
+    "name": "MagicSchool",
+    "url": "https://www.uneiaparjour.fr/magicschool/"
+  },
+  "comparia": {
+    "name": "compar:IA",
+    "url": "https://www.uneiaparjour.fr/comparia/"
+  },
+  "euria": {
+    "name": "Euria",
+    "url": "https://www.uneiaparjour.fr/euria/"
+  },
+  "le-chat-v2": {
+    "name": "Le Chat Mistral",
+    "url": "https://www.uneiaparjour.fr/le-chat-v2/"
+  },
+  "gemini": {
+    "name": "Gemini",
+    "url": "https://www.uneiaparjour.fr/gemini/"
+  },
+  "artefacts-de-claude": {
+    "name": "Claude",
+    "url": "https://www.uneiaparjour.fr/artefacts-de-claude/"
+  },
+  "google-ai-edge-gallery": {
+    "name": "Google AI Edge Gallery",
+    "url": "https://www.uneiaparjour.fr/google-ai-edge-gallery/"
+  },
+  "pdffly-pdf-summarizer": {
+    "name": "PDFFly",
+    "url": "https://www.uneiaparjour.fr/pdffly-pdf-summarizer/"
+  },
+  "explainpaper": {
+    "name": "Explainpaper",
+    "url": "https://www.uneiaparjour.fr/explainpaper/"
+  },
+  "feen": {
+    "name": "Feen AI",
+    "url": "https://www.uneiaparjour.fr/feen/"
+  },
+  "rows": {
+    "name": "Rows",
+    "url": "https://www.uneiaparjour.fr/rows/"
+  },
+  "mistral-ocr-4": {
+    "name": "Mistral OCR 4",
+    "url": "https://www.uneiaparjour.fr/mistral-ocr-4/"
+  },
+  "notebooklm": {
+    "name": "NotebookLM",
+    "url": "https://www.uneiaparjour.fr/notebooklm/"
+  },
+  "makeinfographic-ai": {
+    "name": "MakeInfographic AI",
+    "url": "https://www.uneiaparjour.fr/makeinfographic-ai/"
+  },
+  "viztext-text2diagram": {
+    "name": "Text2diagram",
+    "url": "https://www.uneiaparjour.fr/viztext-text2diagram/"
+  },
+  "napkin": {
+    "name": "Napkin",
+    "url": "https://www.uneiaparjour.fr/napkin/"
+  },
+  "gamma": {
+    "name": "Gamma",
+    "url": "https://www.uneiaparjour.fr/gamma/"
+  },
+  "researchdeck": {
+    "name": "ResearchDeck",
+    "url": "https://www.uneiaparjour.fr/researchdeck/"
+  },
+  "kimi-slides": {
+    "name": "Kimi Slides",
+    "url": "https://www.uneiaparjour.fr/kimi-slides/"
+  },
+  "flashcardx": {
+    "name": "FlashcardX",
+    "url": "https://www.uneiaparjour.fr/flashcardx/"
+  },
+  "learnkata": {
+    "name": "LearnKata",
+    "url": "https://www.uneiaparjour.fr/learnkata/"
+  },
+  "quizizz-wayground": {
+    "name": "Wayground",
+    "url": "https://www.uneiaparjour.fr/quizizz-wayground/"
+  },
+  "minddory": {
+    "name": "MindDory",
+    "url": "https://www.uneiaparjour.fr/minddory/"
+  },
+  "quiz-wizard": {
+    "name": "Quiz wizard",
+    "url": "https://www.uneiaparjour.fr/quiz-wizard/"
+  },
+  "mindmaclasse": {
+    "name": "MindMaClasse",
+    "url": "https://www.uneiaparjour.fr/mindmaclasse/"
+  },
+  "eleven-music": {
+    "name": "Eleven Music",
+    "url": "https://www.uneiaparjour.fr/eleven-music/"
+  },
+  "gemini-music-lyria-3": {
+    "name": "Gemini Music (Lyria 3)",
+    "url": "https://www.uneiaparjour.fr/gemini-music-lyria-3/"
+  },
+  "sonauto": {
+    "name": "Sonauto",
+    "url": "https://www.uneiaparjour.fr/sonauto/"
+  },
+  "minimax-audio": {
+    "name": "Minimax",
+    "url": "https://www.uneiaparjour.fr/minimax-audio/"
+  },
+  "suno": {
+    "name": "Suno",
+    "url": "https://www.uneiaparjour.fr/suno/"
+  },
+  "stable-audio-3": {
+    "name": "Stable Audio 3",
+    "url": "https://www.uneiaparjour.fr/stable-audio-3/"
+  },
+  "kyutai-pocket-tts": {
+    "name": "Kyutai",
+    "url": "https://www.uneiaparjour.fr/kyutai-pocket-tts/"
+  },
+  "cartesia": {
+    "name": "Cartesia",
+    "url": "https://www.uneiaparjour.fr/cartesia/"
+  },
+  "handy": {
+    "name": "Handy",
+    "url": "https://www.uneiaparjour.fr/handy/"
+  },
+  "voxtral": {
+    "name": "Voxtral",
+    "url": "https://www.uneiaparjour.fr/voxtral/"
+  },
+  "gemini-3-1-tts-preview": {
+    "name": "Gemini 3.1 TTS Preview",
+    "url": "https://www.uneiaparjour.fr/gemini-3-1-tts-preview/"
+  },
+  "dicte": {
+    "name": "Dicte",
+    "url": "https://www.uneiaparjour.fr/dicte/"
+  },
+  "search-de-jina-ai": {
+    "name": "Jina",
+    "url": "https://www.uneiaparjour.fr/search-de-jina-ai/"
+  },
+  "ecosia": {
+    "name": "Ecosia",
+    "url": "https://www.uneiaparjour.fr/ecosia/"
+  },
+  "veritas-source": {
+    "name": "Veritas Source",
+    "url": "https://www.uneiaparjour.fr/veritas-source/"
+  },
+  "open-knowledge-maps": {
+    "name": "Open Knowledge Maps",
+    "url": "https://www.uneiaparjour.fr/open-knowledge-maps/"
+  },
+  "mirothinker": {
+    "name": "MiroThinker",
+    "url": "https://www.uneiaparjour.fr/mirothinker/"
+  },
+  "perplexity": {
+    "name": "Perplexity",
+    "url": "https://www.uneiaparjour.fr/perplexity/"
+  },
+  "acti": {
+    "name": "ACTI",
+    "url": "https://www.uneiaparjour.fr/acti/"
+  },
+  "lovable": {
+    "name": "Lovable",
+    "url": "https://www.uneiaparjour.fr/lovable/"
+  },
+  "tldraw-computer": {
+    "name": "tldraw computer",
+    "url": "https://www.uneiaparjour.fr/tldraw-computer/"
+  },
+  "replit": {
+    "name": "Replit",
+    "url": "https://www.uneiaparjour.fr/replit/"
+  },
+  "loopa": {
+    "name": "Loopa",
+    "url": "https://www.uneiaparjour.fr/loopa/"
+  },
+  "antigravity": {
+    "name": "Google Antigravity",
+    "url": "https://www.uneiaparjour.fr/antigravity/"
+  },
+  "chatgpt-images-2-0": {
+    "name": "ChatGPT images 2.0",
+    "url": "https://www.uneiaparjour.fr/chatgpt-images-2-0/"
+  },
+  "qwen-image-3-0": {
+    "name": "Qwen Image 3.0",
+    "url": "https://www.uneiaparjour.fr/qwen-image-3-0/"
+  },
+  "nano-banana-pro": {
+    "name": "Nano Banana",
+    "url": "https://www.uneiaparjour.fr/nano-banana-pro/"
+  },
+  "reve": {
+    "name": "Reve",
+    "url": "https://www.uneiaparjour.fr/reve/"
+  },
+  "google-vids-veo-3-1": {
+    "name": "Google Vids",
+    "url": "https://www.uneiaparjour.fr/google-vids-veo-3-1/"
+  },
+  "kling": {
+    "name": "Kling AI",
+    "url": "https://www.uneiaparjour.fr/kling/"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "categories": [
+    {"fr": "Éducation", "en": "Education", "levels": {
+        "decouvrir": ["eduquia","accessdoc","litgrades"],
+        "plus_loin": ["assistant-ia-etreprof","brisk-teaching"],
+        "avance": ["magicschool"]}},
+    {"fr": "Chatbots", "en": "Chatbots", "levels": {
+        "decouvrir": ["comparia","euria","le-chat-v2"],
+        "plus_loin": ["gemini","artefacts-de-claude"],
+        "avance": ["google-ai-edge-gallery"]}},
+    {"fr": "Analyse de documents", "en": "Document analysis", "levels": {
+        "decouvrir": ["pdffly-pdf-summarizer","explainpaper","feen"],
+        "plus_loin": ["rows","mistral-ocr-4"],
+        "avance": ["notebooklm"]}},
+    {"fr": "Présentation", "en": "Presentation", "levels": {
+        "decouvrir": ["makeinfographic-ai","viztext-text2diagram","napkin"],
+        "plus_loin": ["gamma","researchdeck"],
+        "avance": ["kimi-slides"]}},
+    {"fr": "Quiz et flashcards", "en": "Quiz & flashcards", "levels": {
+        "decouvrir": ["flashcardx","learnkata","quizizz-wayground"],
+        "plus_loin": ["minddory","quiz-wizard"],
+        "avance": ["mindmaclasse"]}},
+    {"fr": "Musique", "en": "Music", "levels": {
+        "decouvrir": ["eleven-music","gemini-music-lyria-3","sonauto"],
+        "plus_loin": ["minimax-audio","suno"],
+        "avance": ["stable-audio-3"]}},
+    {"fr": "Voix", "en": "Voice", "levels": {
+        "decouvrir": ["kyutai-pocket-tts","cartesia","handy"],
+        "plus_loin": ["voxtral","gemini-3-1-tts-preview"],
+        "avance": ["dicte"]}},
+    {"fr": "Recherche", "en": "Search", "levels": {
+        "decouvrir": ["search-de-jina-ai","ecosia","veritas-source"],
+        "plus_loin": ["open-knowledge-maps","mirothinker"],
+        "avance": ["perplexity"]}},
+    {"fr": "Applications et agents", "en": "Apps & agents", "levels": {
+        "decouvrir": ["acti","lovable","tldraw-computer"],
+        "plus_loin": ["replit","loopa"],
+        "avance": ["antigravity"]}},
+    {"fr": "Image et vidéo", "en": "Image & video", "levels": {
+        "decouvrir": ["chatgpt-images-2-0","qwen-image-3-0","nano-banana-pro"],
+        "plus_loin": ["reve","google-vids-veo-3-1"],
+        "avance": ["kling"]}}
+  ]
+}
