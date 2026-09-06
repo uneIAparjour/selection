@@ -423,3 +423,4 @@ if __name__ == "__main__":
     build_version("", "logos", ROOT)  # v6 — current, lives at the stable root URLs
     build_version("-v5", "logos-v5", os.path.join(ROOT, "versions", "v5-0126"))
     build_version("-v4", "logos-v4", os.path.join(ROOT, "versions", "v4-0825"))
+    build_version("-v3", "logos-v3", os.path.join(ROOT, "versions", "v3-0225"))

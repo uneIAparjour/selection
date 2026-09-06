@@ -1,0 +1,242 @@
+{
+  "krea": {
+    "name": "Krea",
+    "url": "https://www.uneiaparjour.fr/krea/"
+  },
+  "ideogram": {
+    "name": "Ideogram",
+    "url": "https://www.uneiaparjour.fr/ideogram/"
+  },
+  "leonardo": {
+    "name": "Leonardo",
+    "url": "https://www.uneiaparjour.fr/leonardo/"
+  },
+  "dicte": {
+    "name": "Dicte",
+    "url": "https://www.uneiaparjour.fr/dicte/"
+  },
+  "sonauto": {
+    "name": "Sonauto",
+    "url": "https://www.uneiaparjour.fr/sonauto/"
+  },
+  "suno": {
+    "name": "Suno",
+    "url": "https://www.uneiaparjour.fr/suno/"
+  },
+  "quiz-wizard": {
+    "name": "Quiz wizard",
+    "url": "https://www.uneiaparjour.fr/quiz-wizard/"
+  },
+  "quizizz": {
+    "name": "Quizizz",
+    "url": "https://www.uneiaparjour.fr/quizizz-wayground/"
+  },
+  "eduease": {
+    "name": "EduEase",
+    "url": "https://www.uneiaparjour.fr/eduease/"
+  },
+  "flashcardx": {
+    "name": "FlashcardX",
+    "url": "https://www.uneiaparjour.fr/flashcardx/"
+  },
+  "quizalize": {
+    "name": "Quizalize",
+    "url": "https://www.uneiaparjour.fr/quizalize/"
+  },
+  "gamma": {
+    "name": "Gamma",
+    "url": "https://www.uneiaparjour.fr/gamma/"
+  },
+  "prezo": {
+    "name": "Prezo",
+    "url": "https://www.uneiaparjour.fr/prezo/"
+  },
+  "gibbly": {
+    "name": "Gibbly",
+    "url": "https://www.uneiaparjour.fr/gibbly/"
+  },
+  "copula": {
+    "name": "Copula AI",
+    "url": "https://www.uneiaparjour.fr/copula/"
+  },
+  "julius": {
+    "name": "Julius",
+    "url": "https://www.uneiaparjour.fr/julius/"
+  },
+  "twee": {
+    "name": "Twee",
+    "url": "https://www.uneiaparjour.fr/twee/"
+  },
+  "diffit": {
+    "name": "Diffit",
+    "url": "https://www.uneiaparjour.fr/diffit/"
+  },
+  "magicschool": {
+    "name": "MagicSchool",
+    "url": "https://www.uneiaparjour.fr/magicschool/"
+  },
+  "brisk-teaching": {
+    "name": "Brisk Teaching",
+    "url": "https://www.uneiaparjour.fr/brisk-teaching/"
+  },
+  "hailuoai": {
+    "name": "Hailuo AI",
+    "url": "https://www.uneiaparjour.fr/hailuoai/"
+  },
+  "kling": {
+    "name": "Kling AI",
+    "url": "https://www.uneiaparjour.fr/kling/"
+  },
+  "perplexity": {
+    "name": "Perplexity",
+    "url": "https://www.uneiaparjour.fr/perplexity/"
+  },
+  "youchat": {
+    "name": "you.com",
+    "url": "https://www.uneiaparjour.fr/youchat/"
+  },
+  "bagoodex": {
+    "name": "Bagoodex",
+    "url": "https://www.uneiaparjour.fr/bagoodex/"
+  },
+  "genspark": {
+    "name": "Genspark",
+    "url": "https://www.uneiaparjour.fr/genspark/"
+  },
+  "mumble": {
+    "name": "Mumble Note",
+    "url": "https://www.uneiaparjour.fr/mumble/"
+  },
+  "speechmatics": {
+    "name": "Speechmatics",
+    "url": "https://www.uneiaparjour.fr/speechmatics/"
+  },
+  "loudme": {
+    "name": "LoudMe",
+    "url": "https://www.uneiaparjour.fr/loudme/"
+  },
+  "artifacts-de-claude-3-5-sonnet": {
+    "name": "Artifacts de Claude 3.5 Sonnet",
+    "url": "https://www.uneiaparjour.fr/artifacts-de-claude-3-5-sonnet/"
+  },
+  "notebookllm": {
+    "name": "NotebookLM",
+    "url": "https://www.uneiaparjour.fr/notebooklm/"
+  },
+  "documator": {
+    "name": "Documator",
+    "url": "https://www.uneiaparjour.fr/documator/"
+  },
+  "recapiogpt": {
+    "name": "RecapioGPT",
+    "url": "https://www.uneiaparjour.fr/recapiogpt/"
+  },
+  "summarize": {
+    "name": "Summarize",
+    "url": "https://www.uneiaparjour.fr/summarize/"
+  },
+  "guidde": {
+    "name": "Guidde",
+    "url": "https://www.uneiaparjour.fr/guidde/"
+  },
+  "slidesgo": {
+    "name": "Slidesgo",
+    "url": "https://www.uneiaparjour.fr/slidesgo/"
+  },
+  "school-ai": {
+    "name": "School AI",
+    "url": "https://www.uneiaparjour.fr/school-ai/"
+  },
+  "cassette": {
+    "name": "Cassette",
+    "url": "https://www.uneiaparjour.fr/cassette/"
+  },
+  "websim": {
+    "name": "Websim",
+    "url": "https://www.uneiaparjour.fr/websim/"
+  },
+  "multi-search-et-multi-ai": {
+    "name": "Multi Search et Multi AI",
+    "url": "https://www.uneiaparjour.fr/multi-search-et-multi-ai/"
+  },
+  "polychat": {
+    "name": "Polychat",
+    "url": "https://www.uneiaparjour.fr/polychat/"
+  },
+  "chatbot-arena": {
+    "name": "Chatbot Arena",
+    "url": "https://www.uneiaparjour.fr/chatbot-arena/"
+  },
+  "le-chat-v2": {
+    "name": "Le Chat Mistral",
+    "url": "https://www.uneiaparjour.fr/le-chat-v2/"
+  },
+  "qwen-chat": {
+    "name": "Qwen Chat",
+    "url": "https://www.uneiaparjour.fr/qwen-chat/"
+  },
+  "napkin": {
+    "name": "Napkin",
+    "url": "https://www.uneiaparjour.fr/napkin/"
+  },
+  "nexform": {
+    "name": "Nexform",
+    "url": "https://www.uneiaparjour.fr/nexform/"
+  },
+  "fuzz-de-riffusion": {
+    "name": "Riffusion",
+    "url": "https://www.uneiaparjour.fr/fuzz-de-riffusion/"
+  },
+  "pack-generator": {
+    "name": "Pack generator",
+    "url": "https://www.uneiaparjour.fr/pack-generator/"
+  },
+  "super-podcast": {
+    "name": "SuperPodcast",
+    "url": "https://www.uneiaparjour.fr/super-podcast/"
+  },
+  "zenmic": {
+    "name": "Zenmic",
+    "url": "https://www.uneiaparjour.fr/zenmic/"
+  },
+  "genfm": {
+    "name": "GenFM",
+    "url": "https://www.uneiaparjour.fr/genfm/"
+  },
+  "assistants-huggingchat": {
+    "name": "HuggingChat",
+    "url": "https://www.uneiaparjour.fr/assistants-huggingchat/"
+  },
+  "felo": {
+    "name": "Felo",
+    "url": "https://www.uneiaparjour.fr/felo/"
+  },
+  "thea": {
+    "name": "Thea",
+    "url": "https://www.uneiaparjour.fr/thea/"
+  },
+  "automina": {
+    "name": "Automina",
+    "url": "https://www.uneiaparjour.fr/automina/"
+  },
+  "proxy": {
+    "name": "Convergence",
+    "url": "https://www.uneiaparjour.fr/proxy/"
+  },
+  "bolt": {
+    "name": "Bolt",
+    "url": "https://www.uneiaparjour.fr/bolt/"
+  },
+  "partyrock": {
+    "name": "PartyRock",
+    "url": "https://www.uneiaparjour.fr/partyrock/"
+  },
+  "recraft-2": {
+    "name": "Recraft",
+    "url": "https://www.uneiaparjour.fr/recraft-v3/"
+  },
+  "replit": {
+    "name": "Replit",
+    "url": "https://www.uneiaparjour.fr/replit/"
+  }
+}

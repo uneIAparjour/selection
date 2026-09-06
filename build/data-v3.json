@@ -1,0 +1,184 @@
+{
+  "categories": [
+    {
+      "fr": "Éducation",
+      "en": "Education",
+      "levels": {
+        "avance": [
+          "thea"
+        ],
+        "plus_loin": [
+          "magicschool",
+          "brisk-teaching"
+        ],
+        "decouvrir": [
+          "twee",
+          "diffit",
+          "school-ai"
+        ]
+      }
+    },
+    {
+      "fr": "Chatbots",
+      "en": "Chatbots",
+      "levels": {
+        "avance": [
+          "assistants-huggingchat"
+        ],
+        "plus_loin": [
+          "polychat",
+          "qwen-chat"
+        ],
+        "decouvrir": [
+          "artifacts-de-claude-3-5-sonnet",
+          "chatbot-arena",
+          "le-chat-v2"
+        ]
+      }
+    },
+    {
+      "fr": "Analyse de documents",
+      "en": "Document analysis",
+      "levels": {
+        "avance": [
+          "notebookllm"
+        ],
+        "plus_loin": [
+          "julius",
+          "summarize"
+        ],
+        "decouvrir": [
+          "copula",
+          "documator",
+          "recapiogpt"
+        ]
+      }
+    },
+    {
+      "fr": "Présentation",
+      "en": "Presentation",
+      "levels": {
+        "avance": [
+          "gamma"
+        ],
+        "plus_loin": [
+          "gibbly",
+          "guidde"
+        ],
+        "decouvrir": [
+          "prezo",
+          "slidesgo",
+          "napkin"
+        ]
+      }
+    },
+    {
+      "fr": "Quiz et flashcards",
+      "en": "Quiz & flashcards",
+      "levels": {
+        "avance": [
+          "quiz-wizard"
+        ],
+        "plus_loin": [
+          "quizizz",
+          "quizalize"
+        ],
+        "decouvrir": [
+          "eduease",
+          "flashcardx",
+          "nexform"
+        ]
+      }
+    },
+    {
+      "fr": "Musique",
+      "en": "Music",
+      "levels": {
+        "avance": [
+          "pack-generator"
+        ],
+        "plus_loin": [
+          "suno",
+          "fuzz-de-riffusion"
+        ],
+        "decouvrir": [
+          "sonauto",
+          "loudme",
+          "cassette"
+        ]
+      }
+    },
+    {
+      "fr": "Voix",
+      "en": "Voice",
+      "levels": {
+        "avance": [
+          "dicte"
+        ],
+        "plus_loin": [
+          "super-podcast",
+          "genfm"
+        ],
+        "decouvrir": [
+          "mumble",
+          "speechmatics",
+          "zenmic"
+        ]
+      }
+    },
+    {
+      "fr": "Recherche",
+      "en": "Search",
+      "levels": {
+        "avance": [
+          "perplexity"
+        ],
+        "plus_loin": [
+          "bagoodex",
+          "multi-search-et-multi-ai"
+        ],
+        "decouvrir": [
+          "youchat",
+          "genspark",
+          "felo"
+        ]
+      }
+    },
+    {
+      "fr": "Image et vidéo",
+      "en": "Image & video",
+      "levels": {
+        "avance": [
+          "krea"
+        ],
+        "plus_loin": [
+          "leonardo",
+          "recraft-2"
+        ],
+        "decouvrir": [
+          "ideogram",
+          "hailuoai",
+          "kling"
+        ]
+      }
+    },
+    {
+      "fr": "Applications et agents",
+      "en": "Apps & agents",
+      "levels": {
+        "avance": [
+          "partyrock"
+        ],
+        "plus_loin": [
+          "websim",
+          "replit"
+        ],
+        "decouvrir": [
+          "automina",
+          "proxy",
+          "bolt"
+        ]
+      }
+    }
+  ]
+}
