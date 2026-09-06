@@ -32,13 +32,13 @@
         "decouvrir": ["search-de-jina-ai","ecosia","veritas-source"],
         "plus_loin": ["open-knowledge-maps","mirothinker"],
         "avance": ["perplexity"]}},
-    {"fr": "Applications et agents", "en": "Apps & agents", "levels": {
-        "decouvrir": ["acti","lovable","tldraw-computer"],
-        "plus_loin": ["replit","loopa"],
-        "avance": ["antigravity"]}},
     {"fr": "Image et vidéo", "en": "Image & video", "levels": {
         "decouvrir": ["chatgpt-images-2-0","qwen-image-3-0","nano-banana-pro"],
         "plus_loin": ["reve","google-vids-veo-3-1"],
-        "avance": ["kling"]}}
+        "avance": ["kling"]}},
+    {"fr": "Applications et agents", "en": "Apps & agents", "levels": {
+        "decouvrir": ["acti","lovable","tldraw-computer"],
+        "plus_loin": ["replit","loopa"],
+        "avance": ["antigravity"]}}
   ]
 }
