@@ -16,8 +16,7 @@ La roue était jusqu'ici un design Canva embarqué en iframe. Ça fonctionnait, 
   dupliquer et maintenir le design à la main dans l'outil.
 - **Impossible à corriger rapidement** — le moindre changement (un outil renommé, un lien
   mort) nécessite de rouvrir Canva, retrouver le bon calque, republier, régénérer l'export.
-- **Dépendance à un outil propriétaire** — aucune version du design n'est versionnée,
-  diffable, ou réutilisable en dehors de Canva.
+- **Dépendance à un outil propriétaire** — aucune version du design n'est versionnée ou réutilisable en dehors de Canva.
 
 Ce dépôt reprend la main : la roue est régénérée par un script Python à partir de données
 structurées (le tableau des 60 outils) et des vrais logos des outils, extraits une fois
@@ -68,7 +67,7 @@ Le dépôt est organisé pour accueillir les 5 autres versions historiques de la
   `-en.html`) : ce sont les deux seules URLs à ne jamais changer, puisque ce sont elles
   qui sont embarquées en iframe sur le site.
 
-## Mettre à jour pour une nouvelle version
+## Démarche pas à pas
 
 1. Exporter le nouveau design Canva en `.pptx`, le dézipper dans `source/vN-XXXX/`.
 2. Mettre à jour `build/data.json` (catégories/outils) à partir du tableau de la page
