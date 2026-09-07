@@ -421,18 +421,16 @@ LIST_LABELS = {
         "archives_title": "Archives",
         "col_category": "Catégorie",
         "col_levels": ["Pour découvrir", "Pour aller plus loin", "Utilisation avancée"],
-        "pdf_label": "Télécharger au format pdf",
         "version_prefix": "Version du",
-        "print_wheel_label": "Imprimer la roue",
+        "print_wheel_label": "Exporter pdf / imprimer",
     },
     "en": {
         "list_title": "List of apps mentioned",
         "archives_title": "Archives",
         "col_category": "Category",
         "col_levels": ["Getting started", "Going further", "Advanced use"],
-        "pdf_label": "Download as PDF",
         "version_prefix": "Version of",
-        "print_wheel_label": "Print the wheel",
+        "print_wheel_label": "Export pdf / print",
     },
 }
 
@@ -462,9 +460,11 @@ def build_tool_list_html(data, lookup, lang):
     )
 
 
-# each entry: (json suffix, versions/ dirname, "Version du" date, official PDF URL)
-# dates and PDF URLs come straight from the live uneiaparjour.fr/selection/ page (the "current"
-# version's own displayed date there is stale — this uses that PDF's actual creation date instead)
+# each entry: (json suffix, versions/ dirname, "Version du" date, official PDF URL — kept for
+# reference even though the page no longer links to it, now that each wheel exports/prints
+# itself via the "Exporter pdf / imprimer" button instead)
+# dates come straight from the live uneiaparjour.fr/selection/ page (the "current" version's
+# own displayed date there is stale — this uses that PDF's actual creation date instead)
 VERSION_INFO = [
     ("", "v6-0926", "28/08/2026",
      "https://www.uneiaparjour.fr/wp-content/uploads/2026/08/Selection-outils-uneIAparjour-0826.pdf"),
@@ -533,7 +533,7 @@ VERSION_DESCRIPTIONS = {
 
 
 def build_version_block(idx, lang, is_current):
-    suffix, dirname, date, pdf_url = VERSION_INFO[idx]
+    suffix, dirname, date, _pdf_url = VERSION_INFO[idx]
     labels = LIST_LABELS[lang]
     desc, changes = VERSION_DESCRIPTIONS[lang][idx]
     changes_html = f'<p class="version-changes">{changes}</p>' if changes else ""
@@ -559,10 +559,10 @@ def build_version_block(idx, lang, is_current):
         f'<{heading_tag}>{labels["version_prefix"]} {date}</{heading_tag}>'
         f'<p class="version-desc">{desc}</p>'
         f'{changes_html}'
-        f'<a class="pdf-link" href="{pdf_url}" target="_blank" rel="noopener">{labels["pdf_label"]}</a>'
+        f'<div class="wheel-card">{svg}'
         f'<button class="print-wheel-btn" type="button" onclick="printWheelOnly({idx})">'
         f'{print_icon}{labels["print_wheel_label"]}</button>'
-        f'<div class="wheel-card">{svg}</div>'
+        f'</div>'
         f'{tool_list}'
         f'</div>'
     )
@@ -590,12 +590,10 @@ body{{font-family:var(--font);background:#252525;display:flex;justify-content:ce
 .version-block h3{{font-size:14px;font-weight:800;margin-bottom:8px}}
 .version-desc{{font-size:12px;color:#ccc;line-height:1.6}}
 .version-changes{{font-size:11.5px;color:var(--muted);margin-top:4px;font-style:italic}}
-.pdf-link{{display:inline-block;margin-top:10px;margin-right:14px;font-size:11.5px;font-weight:700;color:var(--amber);text-decoration:none}}
-.pdf-link:hover{{text-decoration:underline}}
-.print-wheel-btn{{display:inline-flex;align-items:center;gap:6px;margin-top:10px;background:rgba(0,0,0,.25);border:1px solid var(--border);color:#fff;font-family:var(--font);font-size:11px;font-weight:700;padding:6px 12px;border-radius:7px;cursor:pointer;vertical-align:middle}}
+.print-wheel-btn{{position:absolute;right:4%;bottom:4%;display:inline-flex;align-items:center;gap:6px;background:rgba(0,0,0,.55);border:1px solid var(--border);color:#fff;font-family:var(--font);font-size:11px;font-weight:700;padding:6px 12px;border-radius:7px;cursor:pointer}}
 .print-wheel-btn:hover{{border-color:var(--orange);color:var(--orange)}}
 .print-wheel-btn svg{{width:12px;height:12px;fill:currentColor}}
-.wheel-card{{background:transparent;margin-top:16px}}
+.wheel-card{{background:transparent;margin-top:16px;position:relative}}
 svg{{width:100%;height:auto;display:block}}
 svg a:hover rect{{stroke:var(--orange);stroke-width:2}}
 .list-section{{margin-top:16px}}
