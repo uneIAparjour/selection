@@ -559,7 +559,8 @@ def build_version_block(idx, lang, is_current):
         f'<{heading_tag}>{labels["version_prefix"]} {date}</{heading_tag}>'
         f'<p class="version-desc">{desc}</p>'
         f'{changes_html}'
-        f'<div class="wheel-card">{svg}'
+        f'<div class="wheel-card">{svg}</div>'
+        f'<div class="wheel-actions">'
         f'<button class="print-wheel-btn" type="button" onclick="printWheelOnly({idx})">'
         f'{print_icon}{labels["print_wheel_label"]}</button>'
         f'</div>'
@@ -590,10 +591,11 @@ body{{font-family:var(--font);background:#252525;display:flex;justify-content:ce
 .version-block h3{{font-size:14px;font-weight:800;margin-bottom:8px}}
 .version-desc{{font-size:12px;color:#ccc;line-height:1.6}}
 .version-changes{{font-size:11.5px;color:var(--muted);margin-top:4px;font-style:italic}}
-.print-wheel-btn{{position:absolute;right:4%;bottom:4%;display:inline-flex;align-items:center;gap:6px;background:rgba(0,0,0,.55);border:1px solid var(--border);color:#fff;font-family:var(--font);font-size:11px;font-weight:700;padding:6px 12px;border-radius:7px;cursor:pointer}}
+.wheel-actions{{display:flex;justify-content:flex-end;margin-top:12px}}
+.print-wheel-btn{{display:inline-flex;align-items:center;gap:6px;background:rgba(0,0,0,.25);border:1px solid var(--border);color:#fff;font-family:var(--font);font-size:11px;font-weight:700;padding:7px 14px;border-radius:7px;cursor:pointer}}
 .print-wheel-btn:hover{{border-color:var(--orange);color:var(--orange)}}
 .print-wheel-btn svg{{width:12px;height:12px;fill:currentColor}}
-.wheel-card{{background:transparent;margin-top:16px;position:relative}}
+.wheel-card{{background:transparent;margin-top:16px}}
 svg{{width:100%;height:auto;display:block}}
 svg a:hover rect{{stroke:var(--orange);stroke-width:2}}
 .list-section{{margin-top:16px}}
